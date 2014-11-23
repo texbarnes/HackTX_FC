@@ -1,0 +1,38 @@
+<div class="page-header"><h1>Orders</h1></div>
+
+  <% form_tag("search", method: "get") do %>
+  <% label_tag(:q, "Search for:") %>
+  <% text_field_tag(:q) %>
+  <% submit_tag("Search") %>
+<% end %>
+
+ 
+<table class="table">
+  <tr>
+    <th>Quantity</th>
+    <th>Paper Stock</th>
+    <th colspan="4">Processed?</th>
+  </tr>
+ 
+  <% @orders.each do |order| %>
+    <tr>
+      <td><%= order.quantity %></td>
+      <td><%= order.paperStock %></td>
+      <td><%=form_for :order, url: {action: "update"}, method: :patch, :html => { :class => 'col-xs-12' } do |f|%>
+            <%if (order.processed == nil || order.processed == false) %>
+              <div class="form-group col-md-6">
+                <%= f.check_box :processed, :class => 'form-control' %>
+              </div>
+            <%else
+               'Yes' 
+               end %>
+      <div class="col-sm-12">
+      <%= f.submit 'Save', :class => 'btn btn-primary' %>
+    </div>
+     <% end %></td>
+
+      
+  <% end %>
+</table>
+
+<p> <%= link_to 'Home', welcome_index_path %> </p>      

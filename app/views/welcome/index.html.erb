@@ -1,0 +1,78 @@
+<% title 'ForeverCard' %>
+<% style 'index' %>
+<nav class="navbar" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header visible-xs-block">
+      <a href="/" class="navbar-brand">ForeverCard</a>
+    </div>
+
+    <%= form_for(:session, url: login_path, :html => { :class => 'navbar-form navbar-right' }) do |f| %>
+    <span class="navbar-text">Returning users:</span>
+    <%= f.text_field :username, :class => 'form-control', :placeholder => 'Username' %>
+
+    <%= f.password_field :password, :class => 'form-control', :placeholder => 'Password' %>
+
+    <%= f.submit "Log in", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</nav>
+
+<div class="row accent" id="header">
+  <div class="col-sm-6 col-sm-offset-3">
+    <div class="text-center">
+      <h1 id="big-title">ForeverCard</h1>
+      <p class="lead">Your contacts will never lose contact.</p>
+    </div>
+    <hr>
+
+    <form action="/users/new" method="GET">
+      <div class="row">
+        <div id="signup" class="col-md-6 col-md-offset-3">
+          <h2>Sign up now</h2>
+          <p>Create a ForeverCard account today for <b>free</b>!</p>
+          <div class="form-group">
+            <input type="submit" class="btn btn-primary" id="signup-submit" value="Sign up">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="widthcap">
+  <div class="row padded">
+    <div class="col-sm-9">
+      <h1>Your Business Card</h1>
+      <p>Your new ForeverCard is as dynamic as you are. You no longer have to worry about losing your contacts when your information changes! Keep all of those career fair, conference, and networking event contacts for life. We’ve all heard the mantra “It’s not what you know, but who you know that matters”. With ForeverCard, you’ll be sure to hang onto who you know forever.</p>
+    </div>
+
+    <div class="col-sm-3">
+      <img src="http://www.ecosprinter.eu/migration-culture-and-identity/wp-content/uploads/sites/6/2013/12/Identity.png" alt="" class="col-sm-12 hidden-xs">
+    </div>
+  </div>
+
+  <div class="row padded">
+    <div class="col-sm-3">
+      <img src="http://us.123rf.com/450wm/demonique/demonique1301/demonique130100055/17420461-hand-holding-debit-credit-card-monochrome-black-and-white-business-finance-illustration.jpg" alt="" class="col-sm-12 hidden-xs">
+    </div>
+
+    <div class="col-sm-9">
+      <h1>Bridge Between Personal & Digital</h1>
+      <p>You’re great at networking and you love the personal feel of handing someone your business card. You also have a multitude of digital profiles that are constantly updated and you want all of your contacts to keep up with your changes. ForeverCard gives you the flexibility to do both! With seamless QR code connection, your contacts will instantly be taken from the personal realm into digital realm and never lose a bit of your information in the process.</p>
+    </div>
+  </div>
+
+  <div class="row padded">
+    <div class="col-sm-9">
+      <h1>The Future is Here…</h1>
+      <p>We all the know that the world is moving in a digital direction and now is the time for you to join in! Make your networking efforts count. Beat out the competition and turn heads with your ForeverCard. Take charge of how your contacts, both old and new, interact with you. Stay relevant in the digital age.</p>
+    </div>
+    <div class="col-sm-3">
+      <img src="http://cdn.toonvectors.com/images/35/17927/toonvectors-17927-460.jpg" alt="" class="col-sm-12 hidden-xs">
+    </div>
+  </div>
+</div>
+
+<div class="row footer">
+  <div class="text-center copyright">&copy; 2014 Real Good Apps. All Rights Reserved.</div>
+</div>

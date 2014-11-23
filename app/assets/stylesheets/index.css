@@ -1,0 +1,44 @@
+nav {
+	position: absolute !important;
+	width: 100%;
+	background: none;
+	color: #fff;
+}
+
+.navbar-brand {
+	color: inherit;
+}
+
+.row {
+	margin: 0;
+}
+
+#header {
+	padding: 56px 0 48px 0;
+	background: url('https://upload.wikimedia.org/wikipedia/commons/6/62/Black-and-Blue-Business-Cards-Design.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.form-control {
+	opacity: 0.875;
+}
+
+.form-control:focus {
+	opacity: 1;
+}
+
+#big-title {
+	font-size: 56px;
+	font-weight: 300;
+}
+
+#signup {
+	background: rgba(0,0,0,0.375);
+}
+
+@media (max-width: 768px) {
+	#header {
+		padding-top: 256px;
+	}
+}

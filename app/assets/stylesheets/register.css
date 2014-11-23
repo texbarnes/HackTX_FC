@@ -1,0 +1,27 @@
+body {
+	min-height: 100%;
+	background: #666;
+	background: url('/footer_lodyas.png');
+}
+
+nav {
+	background: none !important;
+	border: none !important;
+}
+
+h1, h2, label, p {
+	color: rgba(255,255,255,0.875);
+}
+
+.widthcap {
+	max-width: 800px;
+}
+
+.error-notice, .errors {
+  color: #e74c3c;
+}
+
+.footer {
+	margin-top: 48px;
+	background: none;
+}
