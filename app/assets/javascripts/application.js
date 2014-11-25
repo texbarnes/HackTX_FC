@@ -17,6 +17,3 @@
 
 
 //= require social-share-button
-//= require rqrcode
-//= require rqrcode_png
-//= require google-qr
