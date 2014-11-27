@@ -43,6 +43,7 @@ gem 'spring',        group: :development
 #Use Social Sharing Buttons
 gem 'social-share-button', '~> 0.1.8'
 gem 'bundler', '~> 1.6.3'
+#gem 'bundler', '~> 1.7.7'
 gem 'rdiscount', '~> 2.1.7.1'
 gem 'ronn', '~> 0.7.3'
 gem 'hpricot', '~> 0.8.6'
@@ -74,4 +75,4 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bcrypt-ruby', '~> 3.1.5'
 gem 'rails_12factor', '~> 0.0.3'
 gem 'tzinfo-data'
-gem 'sqlite3', '~>1.3.10'
+#gem 'sqlite3', '~>1.3.10'
