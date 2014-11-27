@@ -8,9 +8,9 @@
 
     <%= form_for(:session, url: login_path, :html => { :class => 'navbar-form navbar-right' }) do |f| %>
     <span class="navbar-text">Returning users:</span>
-    <%= f.text_field :username, :class => 'form-control', :placeholder => 'Username' %>
+    <%= f.text_field :username, :class => 'form-control'%>
 
-    <%= f.password_field :password, :class => 'form-control', :placeholder => 'Password' %>
+    <%= f.password_field :password, :class => 'form-control'%>
 
     <%= f.submit "Log in", class: "btn btn-primary" %>
     <% end %>
