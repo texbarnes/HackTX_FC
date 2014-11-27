@@ -17,3 +17,4 @@
 
 
 //= require social-share-button
+//= require bootstrap
