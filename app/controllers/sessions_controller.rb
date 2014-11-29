@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     else
       # Create an error message.
       flash.now[:danger] = 'Invalid username/password combination'
-      render 'new'
+      redirect_to root_url
     end
   end
 
