@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   
   #Jewel Add
-  get  'login' => 'sessions#create'
+  get  'login' => 'sessions#new'
   post  'login' => 'sessions#create'
   get  'logout' => 'sessions#destroy'
   resources :users
