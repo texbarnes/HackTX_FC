@@ -1,5 +1,8 @@
 class SessionsController < ApplicationController
   def new
+    if !logged_in?
+      redirect_to root_url
+    end
   end
 
   def create
@@ -12,7 +15,6 @@ class SessionsController < ApplicationController
     else
       # Create an error message.
       flash.now[:danger] = 'Invalid username/password combination'
-      redirect_to root_url
     end
   end
 
