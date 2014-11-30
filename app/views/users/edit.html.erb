@@ -10,7 +10,7 @@
     </div>
 
 <%= form_for :user, url: user_path(@user), method: :patch, :html => { :class => 'col-xs-12' } do |f| %>
-
+    <% title("#{@user.first} #{@user.last} - ForeverCard") %>
     <% style 'card.css' %>
 
     <div class="widthcap card">
@@ -95,7 +95,6 @@
   </div>
 </div>
 
-<div class="widthcap clearfix">
   <%= form_for :user, url: user_path(@user), method: :patch, :html => { :class => 'col-xs-12' } do |f| %>
     <div class="col-sm-6">
       <h2>Account</h2>
@@ -184,7 +183,6 @@
       <%= f.submit 'Save your ForeverCard', :class => 'btn btn-primary' %>
     </div>
   <% end %>
-</div>
 
 <div class="row footer">
   <div class="text-center copyright">&copy; 2014 Real Good Apps. All Rights Reserved.</div>
