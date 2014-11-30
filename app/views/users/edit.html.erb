@@ -74,12 +74,32 @@
         </div>
 
         <div class="row social">
-          <a class="fa fa-facebook" href="//facebook.com/<%= @user.facebook %>"></a>
-          <a class="fa fa-twitter" href="//twitter.com/<%= @user.twitter %>"></a>
-          <a class="fa fa-linkedin" href="//linkedin.com/in/<%= @user.linkedin %>"></a>
+
+          <a class="fa fa-facebook"></a>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <%= f.label :facebook, 'Facebook username' %>
+              <%= f.text_field :facebook, :class => 'form-control' %>
+            </div>
+          </div>
+
+          <a class="fa fa-twitter"></a>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <%= f.label :twitter, 'Twitter handle' %>
+              <%= f.text_field :twitter, :class => 'form-control', :placeholder => '@yourhandle' %>
+            </div>
+          </div>
+
+          <a class="fa fa-linkedin"></a>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <%= f.label :linkedin, 'LinkedIn profile ID' %>
+              <%= f.text_field :linkedin, :class => 'form-control', :placeholder => '1234567890' %>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
     <div class="col-sm-12">
       <%= f.submit 'Save your ForeverCard', :class => 'btn btn-primary' %>
     </div>
