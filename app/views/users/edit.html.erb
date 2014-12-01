@@ -100,7 +100,8 @@
         </div>
     </div>
 
-    <div class="col-sm-6">
+    <div class="col-sm-12">
+      <div class="col-sm-6">
         <div class="form-group">
           <%= f.label :password %>
           <%= f.password_field :password, :class => 'form-control' %>
@@ -110,9 +111,7 @@
           <%= f.label :confirm_password %>
           <%= f.password_field :confirm_password, :class => 'form-control' %>
         </div>
-    </div>
-
-    <div class="col-sm-12">
+      </div>
       <%= f.submit 'Save your ForeverCard', :class => 'btn btn-primary' %>
     </div>
 <% end %>
