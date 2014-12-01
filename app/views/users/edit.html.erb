@@ -69,20 +69,21 @@
 
         <div class="row">
           <div class="col-xs-12 text-center bio">
-            <%= @user.bio %>
+              <div class="form-group">
+                <%= f.label :bio, 'Short biography' %>
+                <%= f.text_field :bio, :class => 'form-control'%>
+              </div>
           </div>
         </div>
 
         <div class="row social">
           <div class="col-sm-4">
-            <a class="fa fa-facebook"></a>
             <div class="form-group">
               <%= f.label :facebook, 'Facebook username' %>
               <%= f.text_field :facebook, :class => 'form-control' %>
             </div>
           </div>
 
-          <a class="fa fa-twitter"></a>
           <div class="col-sm-4">
             <div class="form-group">
               <%= f.label :twitter, 'Twitter handle' %>
@@ -90,7 +91,6 @@
             </div>
           </div>
 
-          <a class="fa fa-linkedin"></a>
           <div class="col-sm-4">
             <div class="form-group">
               <%= f.label :linkedin, 'LinkedIn profile ID' %>
