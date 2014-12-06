@@ -1,0 +1,87 @@
+package assighnment6;
+
+import java.util.ArrayList;
+
+public class A6Driver {
+	
+	ArrayList<Seat> seats = new ArrayList<Seat>();
+	private int index;
+	
+	public static void main(String[] args)
+	{
+		A6Driver ob = new A6Driver();
+		ob.seatInit();
+		BoxOffice box1 = new BoxOffice("Box Office A");
+		BoxOffice box2 = new BoxOffice("Box Office B");
+		box1.printTicketSeat(seats.get(2));
+		
+		
+	}
+	
+	public void seatInit()
+	{
+		//front and middle
+		for(char c = 'A'; c<='N'; c += 1)
+		{
+			for(int i = 108; i <= 121; i+=1)
+			{
+				seats.add(new Seat(c, 'M', i));
+			}
+		}
+		// Row A sides
+		for(int i = 104; i<=107; i+=1)
+		{
+			seats.add(new Seat('A', 'L', i));
+		}
+		for(int i = 122; i<=125; i+=1)
+		{
+			seats.add(new Seat('A', 'R', i));
+		}
+		// Front and sides
+		for(char c = 'A'; c<='N'; c += 1)
+		{
+			for(int i = 101; i<=107; i+=1)
+			{
+				seats.add(new Seat(c, 'L', i));
+			}
+			for(int i = 122; i<=128; i+=1)
+			{
+				seats.add(new Seat(c, 'R', i));
+			}
+		}
+		// Back and middle
+		for(char c = 'P'; c<='Z'; c += 1)
+		{
+			for(int i = 108; i <= 121; i+=1)
+			{
+				seats.add(new Seat(c, 'M', i));
+			}
+		}
+		// Row AA and middle
+		for(int i = 111; i<=118; i+=1)
+		{
+			seats.add(new Seat('*', 'M', i));
+		}
+		//Back and Sides
+		for(char c = 'P'; c<='Z'; c += 1)
+		{
+			for(int i = 101; i<=107; i+=1)
+			{
+				seats.add(new Seat(c, 'L', i));
+			}
+			for(int i = 122; i<=128; i+=1)
+			{
+				seats.add(new Seat(c, 'R', i));
+			}
+		}
+		// Row AA and back
+		for(int i = 101; i<=104; i+=1)
+		{
+			seats.add(new Seat('*', 'L', i));
+		}
+		for(int i = 125; i<=128; i+=1)
+		{
+			seats.add(new Seat('*', 'R', i));
+		}
+	}
+}

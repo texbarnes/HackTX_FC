@@ -1,0 +1,8 @@
+package assighnment6;
+
+public class BoxOffice 
+{
+	String name;
+	Theater bates;
+
+}

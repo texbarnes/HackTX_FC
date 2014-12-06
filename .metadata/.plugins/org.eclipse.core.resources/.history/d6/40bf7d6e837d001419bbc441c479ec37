@@ -1,0 +1,10 @@
+package assighnment6;
+
+public class BoxOffice 
+{
+	String name;
+	Theater bates;
+	
+	public BoxOffice(String n , Theater t)
+
+}

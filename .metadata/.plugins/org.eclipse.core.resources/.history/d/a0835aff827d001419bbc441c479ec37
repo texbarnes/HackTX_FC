@@ -1,0 +1,10 @@
+package assighnment6;
+
+public class A6Driver {
+	
+	
+	public static void main(String[] args)
+	{
+		Theater one = new Theater();
+	}
+}

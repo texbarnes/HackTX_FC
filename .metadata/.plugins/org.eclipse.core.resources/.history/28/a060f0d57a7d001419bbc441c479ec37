@@ -1,0 +1,82 @@
+package assighnment6;
+
+import java.util.ArrayList;
+
+public class Theater {
+
+	 ArrayList<Seat> seats = new ArrayList<Seat>();
+	
+	public Theater()
+	{
+		//front and middle
+		for(char c = 'A'; c<='N'; c += 1)
+		{
+			for(int i = 108; i <= 121; i+=1)
+			{
+				seats.add(new Seat(c, 'M', i));
+			}
+		}
+		// Row A sides
+		for(int i = 104; i<=107; i+=1)
+		{
+			seats.add(new Seat('A', 'S', i));
+		}
+		for(int i = 122; i<=125; i+=1)
+		{
+			seats.add(new Seat('A', 'S', i));
+		}
+		// Front and sides
+		for(char c = 'A'; c<='N'; c += 1)
+		{
+			for(int i = 101; i<=107; i+=1)
+			{
+				seats.add(new Seat(c, 'S', i));
+			}
+			for(int i = 122; i<=128; i+=1)
+			{
+				seats.add(new Seat(c, 'S', i));
+			}
+		}
+		// Back and middle
+		for(char c = 'P'; c<='Z'; c += 1)
+		{
+			for(int i = 108; i <= 121; i+=1)
+			{
+				seats.add(new Seat(c, 'M', i));
+			}
+		}
+		// Row AA and middle
+		for(int i = 111; i<=118; i+=1)
+		{
+			seats.add(new Seat('*', 'M', i));
+		}
+		//Back and Sides
+		for(char c = 'P'; c<='Z'; c += 1)
+		{
+			for(int i = 101; i<=107; i+=1)
+			{
+				seats.add(new Seat(c, 'S', i));
+			}
+			for(int i = 122; i<=128; i+=1)
+			{
+				seats.add(new Seat(c, 'S', i));
+			}
+		}
+		// Row AA and back
+		for(int i = 101; i<=104; i+=1)
+		{
+			seats.add(new Seat('*', 'S', i));
+		}
+		for(int i = 125; i<=128; i+=1)
+		{
+			seats.add(new Seat('*', 'S', i));
+		}
+		
+		
+		for(Seat s : seats)
+		{
+			s.printSeat();
+		}
+		
+	}
+}

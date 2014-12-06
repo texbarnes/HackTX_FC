@@ -1,0 +1,35 @@
+package assighnment6;
+
+public class Seat {
+
+	char row;
+	char location;
+	int seatNum;
+	int clientNum;
+	Boolean seatTaken;
+	
+	public Seat(char r, char l, int s)
+	{
+		row = r;
+		location = l;
+		seatNum = s;
+		seatTaken = false;
+	}
+		
+	public boolean isTaken()
+	{
+		return seatTaken;
+	}
+	
+	public void markTaken()
+	{
+		seatTaken = true;
+	}
+	
+	public void printSeat()
+	{
+		
+	}
+	
+	
+}

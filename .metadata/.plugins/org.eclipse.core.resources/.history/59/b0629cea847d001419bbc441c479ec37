@@ -1,0 +1,33 @@
+package assighnment6;
+
+import java.util.ArrayList;
+
+public class BoxOffice 
+{
+	String name;
+	
+	public BoxOffice(String n)
+	{
+		name = n;
+	}
+	
+	public int bestAvailableSeat(ArrayList<Seat> s, int index)
+	{
+		if(index >= s.size())
+			return -1;
+		
+		else
+			return index;
+	}
+	
+	public void markAvailableSeatTaken(ArrayList<Seat> s,int seat)
+	{
+		seats.get(seat).markTaken();
+	}
+	
+	public void printTicketSeat(int seat)
+	{
+		System.out.println()
+	}
+
+}
