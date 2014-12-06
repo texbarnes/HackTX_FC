@@ -1,0 +1,13 @@
+package assighnment6;
+
+import java.util.Queue;
+
+public class Theater {
+
+	Queue<Seat> seats = new Queue<Seat>();
+	
+	public Theater()
+	{
+		
+	}
+}
