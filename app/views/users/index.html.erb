@@ -29,4 +29,8 @@
 </table>
 
 
-<p> <%= link_to 'Home', welcome_index_path %> </p>
+<p> <%= link_to 'Home', welcome_index_path %>
+    <% if current_user.admin? && !current_user?(user) %>
+    | <%= link_to "delete", user, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+      <% end %></p>

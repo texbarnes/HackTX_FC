@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141127155634) do
+ActiveRecord::Schema.define(version: 20141206233041) do
+
+  create_table "admins", force: true do |t|
+    t.string   "username"
+    t.string   "password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "orders", force: true do |t|
     t.integer  "quantity"
@@ -39,6 +46,7 @@ ActiveRecord::Schema.define(version: 20141127155634) do
     t.string   "password_digest"
     t.string   "confirm_password"
     t.string   "remember_digest"
+    t.boolean  "admin",            default: false
   end
 
 end
