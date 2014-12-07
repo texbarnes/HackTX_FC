@@ -3,7 +3,7 @@ class VcardController < ApplicationController
   end
 
 def vcard
-	@user = @user = User.find(params[:id])
+	@user = User.find(params[:id])
 	
 	card = Vpim::Vcard::Maker.make2 do |maker|
   			
