@@ -1,3 +1,5 @@
+require 'vpim/vcard'
+
 module VcardHelper
 
 #dynamically creates a vcard
