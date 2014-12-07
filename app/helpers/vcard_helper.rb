@@ -19,6 +19,7 @@ def vcard(user)
 
 	end
 
+send_data card.to_s, :filename => user.first + user.last + ".vcf"
 		
 end
 
