@@ -10,6 +10,7 @@
                             else 
                               @user.role + " at " + @user.org
                             end %>
+      <h1><b><%= send_data card.to_s, :filename => @user.first + @user.last + ".vcf" %></h1>
       </div>
     </div>
 
