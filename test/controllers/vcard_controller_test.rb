@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class VcardControllerTest < ActionController::TestCase
-  test "should get new" do
-    get :new
+  test "should get view" do
+    get :view
     assert_response :success
   end
 

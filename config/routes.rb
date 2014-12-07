@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
-  get 'vcard/new'
+  get 'vcard/view'
+  
+  get 'admin/new'
 
   get 'sessions/new'
 
