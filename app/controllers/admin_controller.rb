@@ -1,13 +1,14 @@
 class AdminController < ApplicationController
-    def new
-        @admin = Admin.new
+  def new
+  end
+  
+  def create
+    admin = Admin.find_by(username: params[:username])
+    if admin && admin.authenticate(params[:username][:password])
+      redirect_to users_index_url
+    else
+      redirect_to root_url
     end
-    
-    def create
-        admin = Admin.find_by(username: params[:session][:username])
-        if user && user.authenticate(params[:session][:password])
-          redirect_to users_index
-        end
-    end
-    
+
+  end
 end
