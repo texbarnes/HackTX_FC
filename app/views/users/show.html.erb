@@ -12,12 +12,26 @@
                             end %>
       </div>
     </div>
+    
+     <div class="row">
+      <div class="col-xs-12 text-center bio">
+        <%= @user.bio %>
+      </div>
+    </div>
 
     <div class="row">
       <div class="col-xs-12 col-sm-6">
         <div class="row aligned">
           <div class="fa fa-phone"></div>
           <div><a href="tel://<%= @user.phone %>"><%= @user.phone %></a></div>
+        </div>
+        
+        <div class="row aligned">
+          <div><%= link_to image_tag("http://i59.tinypic.com/23wgm.png"), "http://www.facebook.com/" + @user.facebook %> </div>
+        </div>
+        
+        <div class="row aligned">
+          <div><%= link_to image_tag("http://i59.tinypic.com/9a0rbd.png"), "http://www.twitter.com/" + @user.twitter %> </div>
         </div>
       </div>
 
@@ -28,54 +42,11 @@
         <div class="row aligned">
           <div><a href="mailto:<%= @user.email %>"><%= image_tag("http://i59.tinypic.com/2agthzd.png") %></a></div>
         </div>
-      </div>
-    </div>
-    
-    <div class="col-xs-12 col-sm-6">
+        
         <div class="row aligned">
-        </div>
-
-        <div class="row aligned">
-          <div><%= link_to image_tag("http://i59.tinypic.com/23wgm.png"), "http://www.facebook.com/" + @user.facebook %> </div>
+          <div><%= link_to image_tag("http://i59.tinypic.com/2e2h00j.png"), "http://www.linkedin.com/profile/view?id=" + @user.linkedin %> </div>
         </div>
       </div>
-    </div>
-    
-    <div class="col-xs-12 col-sm-6">
-        <div class="row aligned">
-        </div>
-
-        <div class="row aligned">
-          <div><%= link_to image_tag("http://i59.tinypic.com/9a0rbd.png"), "http://www.twitter.com/" + @user.twitter %> </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-xs-12 col-sm-6">
-        <div class="row aligned">
-        </div>
-
-        <div class="row aligned">
-          <div><%= link_to image_tag("http://i59.tinypic.com/2e2h00j.png"), "http://www.linkedin.com/in/" + @user.linkedin %> </div>
-        </div>
-      </div>
-    </div>
-    
-    
-
-    <div class="row">
-      <div class="col-xs-12 text-center bio">
-        <%= @user.bio %>
-      </div>
-    </div>
-
-    <div class="row social">
-      <a class="fa fa-facebook" href="//facebook.com/<%= @user.facebook %>"></a>
-      <a class="fa fa-twitter" href="//twitter.com/<%= @user.twitter %>"></a>
-      <a class="fa fa-linkedin" href="//linkedin.com/in/<%= @user.linkedin %>"></a>
-    </div>
-
-
 
 <div class="row">
       <div class="col-xs-12 text-center bio">
@@ -92,6 +63,8 @@ END:VCARD", :filename => <%= @user.first %>.<%= @user.last %>.vcf</a></div>
       </div>
     </div>
   </div>    
+</div>
+</div>
 
 <div class="row footer hidden-xs">
   <div class="text-center copyright">&copy; 2014 Real Good Apps. All Rights Reserved.</div>
