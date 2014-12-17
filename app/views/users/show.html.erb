@@ -1,7 +1,6 @@
 <% title("#{@user.first} #{@user.last} - ForeverCard") %>
 <% style 'card.css' %>
 
-<div id="vcard"
 <div class="widthcap card">
   <div class="card-inner">
     <div class="card-header">
@@ -27,9 +26,17 @@
         </div>
 
         <div class="row aligned">
-          <div class="fa fa-envelope"></div>
-          <div><a href="mailto:<%= @user.email %>"><%= @user.email %></a></div>
-          <%= link_to image_tag("http://i59.tinypic.com/2agthzd.png"), mail_to(@user.email, name = @user.email) %>
+          <%= link_to image_tag("http://i59.tinypic.com/2agthzd.png"), mail_to @user.email %>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-6">
+        <div class="row aligned">
+        </div>
+
+        <div class="row aligned">
+          <%= link_to image_tag("http://i59.tinypic.com/23wgm.png"), "http://www.facebook.com/" + @user.facebook %>
         </div>
       </div>
     </div>
@@ -51,11 +58,19 @@
 
 <div class="row">
       <div class="col-xs-12 text-center bio">
-        <div><a href="vcard.vcf">Download vCard</a></div>
+        <div><a send_data("BEGIN:VCARD
+VERSION:2.1
+N:<%= @user.last %>;<%= @user.first %> (Name)
+FN:<%= @user.first %><%= @user.last %> (Full Name)
+ORG:<%= @user.org %>
+TITLE:<%= @user.role %>
+TEL;WORK;VOICE:<%= @user.phone %>
+TEL;HOME;VOICE:<%= @user.phone %>
+EMAIL;PREF;INTERNET:<%= @user.email %>
+END:VCARD", :filename => "<%= @user.first %>.<%= @user.last %>.vcf")</a></div>
       </div>
     </div>
     
-</div>    
 
 <div class="row footer hidden-xs">
   <div class="text-center copyright">&copy; 2014 Real Good Apps. All Rights Reserved.</div>
