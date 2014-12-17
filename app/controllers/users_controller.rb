@@ -28,19 +28,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
   
-  def download
-    @user = User.find(params[:id])
-    send_data("BEGIN:VCARD
-VERSION:2.1
-N:" + @user.last + ";" + @user.first + "(Name)
-FN:" + @user.first + @user.last + "(Full Name)
-ORG:" + @user.org + "TITLE:" + @user.role +
-"TEL;WORK;VOICE:" + @user.phone + 
-"TEL;HOME;VOICE:" + @user.phone +
-"EMAIL;PREF;INTERNET:" + @user.email +
-"END:VCARD", :filename => @user.first + "." + @user.last + ".vcf")
-  end  
-  
   def index
     @users = User.all
   end
