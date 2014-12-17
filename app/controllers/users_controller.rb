@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   
   def vcard
     @user = User.find(params[:id])
-    send_data ("BEGIN:VCARD
+    send_data("BEGIN:VCARD
 VERSION:2.1
 N:<%= @user.last %>;<%= @user.first %> (Name)
 FN:<%= @user.first %><%= @user.last %> (Full Name)
@@ -39,7 +39,7 @@ TITLE:<%= @user.role %>
 TEL;WORK;VOICE:<%= @user.phone %>
 TEL;HOME;VOICE:<%= @user.phone %>
 EMAIL;PREF;INTERNET:<%= @user.email %>
-END:VCARD", :filename => "<%= @user.first %>.<%= @user.last %>.vcf")</a>
+END:VCARD", :filename => "<%= @user.first %>.<%= @user.last %>.vcf")
   end  
   
   def index
