@@ -26,7 +26,6 @@
         </div>
 
         <div class="row aligned">
-          <div class="fa fa-envelope"></div>
           <div><a href="mailto:<%= @user.email %>"><%= image_tag("http://i59.tinypic.com/2agthzd.png") %></a></div>
         </div>
       </div>
@@ -37,8 +36,7 @@
         </div>
 
         <div class="row aligned">
-          <div class="fa fa-envelope"></div>
-          <div><%= link_to image_tag("http://i59.tinypic.com/23wgm.png"), "http://www.facebook.com" %> </div>
+          <div><%= link_to image_tag("http://i59.tinypic.com/23wgm.png"), "http://www.facebook.com/" + @user.facebook %> </div>
         </div>
       </div>
     </div>
