@@ -29,7 +29,7 @@
         <div class="row aligned">
           <div class="fa fa-envelope"></div>
           <div><a href="mailto:<%= @user.email %>"><%= @user.email %></a></div>
-          <%= link_to image_tag("http://i59.tinypic.com/2agthzd.png"), mail_to(@user.email) %>
+          <%= link_to image_tag("http://i59.tinypic.com/2agthzd.png"), mail_to(@user.email, name = @user.email) %>
         </div>
       </div>
     </div>
