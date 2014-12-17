@@ -49,6 +49,10 @@
         <div class="row aligned">
           <div><%= link_to image_tag("http://i59.tinypic.com/2e2h00j.png"), "http://www.linkedin.com/profile/view?id=" + @user.linkedin %> </div>
         </div>
+        
+        <div class="row aligned">
+          <div><a href="sms:+<%= @user.phone %>"><%= image_tag("http://i59.tinypic.com/2zxnq7o.png") %></a></div>
+        </div>
       </div>
 
 <div class="row">
