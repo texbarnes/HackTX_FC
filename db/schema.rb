@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141206233041) do
+ActiveRecord::Schema.define(version: 20141217231552) do
 
   create_table "admins", force: true do |t|
     t.string   "username"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20141206233041) do
     t.string   "confirm_password"
     t.string   "remember_digest"
     t.boolean  "admin",            default: false
+    t.string   "vcard"
   end
 
 end

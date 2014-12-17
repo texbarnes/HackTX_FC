@@ -43,7 +43,7 @@ gem 'spring',        group: :development
 #Use Social Sharing Buttons
 gem 'social-share-button', '~> 0.1.8'
 gem 'bundler', '~> 1.6.3'
-#gem 'bundler', '~> 1.7.7'
+#gem 'bundler', '~> 1.7.9'
 gem 'rdiscount', '~> 2.1.7.1'
 gem 'ronn', '~> 0.7.3'
 gem 'hpricot', '~> 0.8.6'
