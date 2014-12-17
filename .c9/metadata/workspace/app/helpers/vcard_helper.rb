@@ -1,0 +1,1 @@
+{"filter":false,"title":"vcard_helper.rb","tooltip":"/app/helpers/vcard_helper.rb","ace":{},"undoManager":{"mark":0,"position":-1,"stack":[]},"timestamp":1418841258548,"hash":"c61db879119fd577937d4c3fb906ab3a67e7faaf"}
