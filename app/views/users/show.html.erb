@@ -58,7 +58,7 @@
 
 <div class="row">
       <div class="col-xs-12 text-center bio">
-        <div><a send_data("BEGIN:VCARD
+        <div><a send_data "BEGIN:VCARD
 VERSION:2.1
 N:<%= @user.last %>;<%= @user.first %> (Name)
 FN:<%= @user.first %><%= @user.last %> (Full Name)
@@ -67,7 +67,7 @@ TITLE:<%= @user.role %>
 TEL;WORK;VOICE:<%= @user.phone %>
 TEL;HOME;VOICE:<%= @user.phone %>
 EMAIL;PREF;INTERNET:<%= @user.email %>
-END:VCARD", :filename => <%= @user.first %>.<%= @user.last %>.vcf )</a></div>
+END:VCARD", :filename => <%= @user.first %>.<%= @user.last %>.vcf</a></div>
       </div>
     </div>
     
