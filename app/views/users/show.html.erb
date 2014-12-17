@@ -27,7 +27,7 @@
 
         <div class="row aligned">
           <div class="fa fa-envelope"></div>
-          <div><a href="mailto:<%= @user.email %>"><%= @user.email %></a></div>
+          <div><a href="mailto:<%= @user.email %>"><%= image_tag("http://i59.tinypic.com/2agthzd.png") %></a></div>
           <%= link_to image_tag("http://i59.tinypic.com/2agthzd.png"), @user.email %>
         </div>
       </div>
@@ -59,7 +59,7 @@ TITLE:<%= @user.role %>
 TEL;WORK;VOICE:<%= @user.phone %>
 TEL;HOME;VOICE:<%= @user.phone %>
 EMAIL;PREF;INTERNET:<%= @user.email %>
-END:VCARD", :filename => <%= @user.first %>"."<%= @user.last %>.vcf )</a></div>
+END:VCARD", :filename => <%= @user.first %>"."<%= @user.last %>".vcf" )</a></div>
       </div>
     </div>
     
