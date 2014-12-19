@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'users/:username' => 'users#show'
+  
   get 'vcard/view'
   
   get 'admin/new'
