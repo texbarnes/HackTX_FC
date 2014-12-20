@@ -30,6 +30,7 @@ class UsersController < ApplicationController
   
   def showWithUser
     @user = User.find_by_username(params[:username])
+    redirect_to @user
   end
   
   def index
