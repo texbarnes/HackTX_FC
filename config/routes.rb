@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  get '/:username' => 'users#showWithUser', :as => "user"
+  get '/:username' => 'users#showWithUser'
   
   get 'vcard/view'
   
