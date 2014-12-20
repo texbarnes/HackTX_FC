@@ -25,7 +25,11 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.find_by_username(params[:username])
+    if(:id)
+      @user = User.find(params[:id])
+    else
+      @user = User.find_by_username(params[:username])
+    end  
   end
   
   def index
