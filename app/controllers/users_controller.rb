@@ -26,11 +26,11 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
-    redirect_to userAlt_path
   end
   
   def showWithUser
     @user = User.find_by_username(params[:username])
+    redirect_to @user
   end
   
   def index
