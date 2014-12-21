@@ -30,11 +30,10 @@ class UsersController < ApplicationController
   
   def showWithUser
     @user = User.find_by_username(params[:username])
-    if(@user.nil?)
-      redirect_to root_url
-    else 
+    if(logged_in?)
       redirect_to @user
-    end  
+    else
+      redirect_to root_url
   end
   
   def index
