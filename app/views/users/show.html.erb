@@ -23,7 +23,9 @@
           <a href="tel://<%= @user.phone %>"><%= image_tag("http://i57.tinypic.com/kf00tk.png") %></a>
           <%= link_to image_tag("http://i61.tinypic.com/33lcad2.png"), "http://www.facebook.com/" + @user.facebook %>
           <a href="mailto:<%= @user.email %>"><%= image_tag("http://i61.tinypic.com/qswi2d.png") %></a>
-          <%= link_to image_tag("http://i58.tinypic.com/2uygnk7.png"), "http://www.twitter.com/" + @user.twitter %>
+          <%=if(!(@user.twitter == nil)) %>
+            <%= link_to image_tag("http://i58.tinypic.com/2uygnk7.png"), "http://www.twitter.com/" + @user.twitter %>
+          <%= end %>  
           <a href="sms:<%= @user.phone %>"><%= image_tag("http://i58.tinypic.com/2njbuw7.png") %></a>
           <%= link_to image_tag("http://i60.tinypic.com/o88lzt.png"), "http://www.linkedin.com/profile/view?id=" + @user.linkedin %>
       </div>
