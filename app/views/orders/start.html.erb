@@ -20,26 +20,32 @@
 
 <div class="widthcap clearfix">
   <%= form_for :order, url: orders_path, :html => { :class => 'col-xs-12' } do |f| %>
-    <div class="col-sm-6">
-
-      <div class="form-group">
-        <%= f.label :quantity %>
-        <%= f.select(:quantity, { "100" => 100, "250" => 250, "500" => 500 }, {}, :class => 'form-control') %>
+  
+      <div class="col-sm-6">
+        <div class="row">
+  
+        <div class="form-group">
+          <%= f.label :quantity %>
+          <%= f.select(:quantity, { "100" => 100, "250" => 250, "500" => 500 }, {}, :class => 'form-control') %>
+        </div>
+  
+        <div class="form-group">
+          <%= f.label :paperStock %>
+          <%= f.select(:paperStock, { "Matte  $" => "Matte", 
+                                        "Premium Matte  $$" => "Premium Matte",
+                                        "Glossy  $$" => "Glossy",
+                                        "Recycled Matte  $$$" => "Recycled Matte",
+                                        "Premium Glossy  $$$" => "Premium Glossy"}, {}, :class => 'form-control')%>
+        </div>
+        </div>
       </div>
-
-      <div class="form-group">
-        <%= f.label :paperStock %>
-        <%= f.select(:paperStock, { "Matte  $" => "Matte", 
-                                      "Premium Matte  $$" => "Premium Matte",
-                                      "Glossy  $$" => "Glossy",
-                                      "Recycled Matte  $$$" => "Recycled Matte",
-                                      "Premium Glossy  $$$" => "Premium Glossy"}, {}, :class => 'form-control')%>
+      
+      <div class = "col">
+        <iframe width='600' height='300' src="https://docs.google.com/spreadsheets/d/19bqXtRVEE0MRBonlaZ1npvAaKnhSZwSkZYkVJxJ4ya0/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
       </div>
       <div class="col-sm-6">
         <%= f.submit 'Submit this order', :class => 'btn btn-primary' %>
     </div>
   <% end %>
-  
-  <iframe width='800' height='300' src="https://docs.google.com/spreadsheets/d/19bqXtRVEE0MRBonlaZ1npvAaKnhSZwSkZYkVJxJ4ya0/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 
 </div>
