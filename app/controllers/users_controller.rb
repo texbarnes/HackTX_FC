@@ -34,6 +34,7 @@ class UsersController < ApplicationController
       redirect_to @user
     else
       redirect_to root_url
+    end  
   end
   
   def index
