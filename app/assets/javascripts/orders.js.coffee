@@ -3,14 +3,14 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 <script type="text/javascript">
 
-var slideDownInitHeight = new Array();
-	var slidedown_direction = new Array();
+Array slideDownInitHeight = new Array();
+	Array slidedown_direction = new Array();
 
-	var slidedownActive = false;
-	var contentHeight = false;
-	var slidedownSpeed = 3; 	// Higher value = faster script
-	var slidedownTimer = 7;	// Lower value = faster script
-	function slidedown_showHide(boxId)
+	boolean slidedownActive = false;
+	boolean contentHeight = false;
+	int slidedownSpeed = 3; 	// Higher value = faster script
+	int slidedownTimer = 7;	// Lower value = faster script
+	slidedown_showHide(boxId)
 	{
 		if(!slidedown_direction[boxId])slidedown_direction[boxId] = 1;
 		if(!slideDownInitHeight[boxId])slideDownInitHeight[boxId] = 0;
@@ -18,8 +18,8 @@ var slideDownInitHeight = new Array();
 		if(slideDownInitHeight[boxId]==0)slidedown_direction[boxId]=slidedownSpeed; else slidedown_direction[boxId] = slidedownSpeed*-1;
 		
 		slidedownContentBox = document.getElementById(boxId);
-		var subDivs = slidedownContentBox.getElementsByTagName('DIV');
-		for(var no=0;no<subDivs.length;no++){
+		String subDivs = slidedownContentBox.getElementsByTagName('DIV');
+		for(int no=0;no<subDivs.length;no++){
 			if(subDivs[no].className=='dhtmlgoodies_content')slidedownContent = subDivs[no];	
 		}
 
@@ -29,7 +29,7 @@ var slideDownInitHeight = new Array();
 		slidedownActive = true;
 		slidedown_showHide_start(slidedownContentBox,slidedownContent);
 	}
-	function slidedown_showHide_start(slidedownContentBox,slidedownContent)
+	slidedown_showHide_start(slidedownContentBox,slidedownContent)
 	{
 
 		if(!slidedownActive)return;
@@ -48,7 +48,7 @@ var slideDownInitHeight = new Array();
 		setTimeout('slidedown_showHide_start(document.getElementById("' + slidedownContentBox.id + '"),document.getElementById("' + slidedownContent.id + '"))',slidedownTimer);	// Choose a lower value than 10 to make the script move faster
 	}
 	
-	function setSlideDownSpeed(newSpeed)
+	setSlideDownSpeed(newSpeed)
 	{
 		slidedownSpeed = newSpeed;
 		
