@@ -6,10 +6,10 @@
 Array slideDownInitHeight = new Array();
 	Array slidedown_direction = new Array();
 
-	boolean slidedownActive = false;
-	boolean contentHeight = false;
-	int slidedownSpeed = 3; 	// Higher value = faster script
-	int slidedownTimer = 7;	// Lower value = faster script
+	Boolean slidedownActive = false;
+	Boolean contentHeight = false;
+	slidedownSpeed = 3; 	// Higher value = faster script
+	slidedownTimer = 7;	// Lower value = faster script
 	slidedown_showHide(boxId)
 	{
 		if(!slidedown_direction[boxId])slidedown_direction[boxId] = 1;
