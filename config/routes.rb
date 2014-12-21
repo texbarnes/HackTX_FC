@@ -53,7 +53,7 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   
-  get '/:username' => 'users#showWithUser'
+  get '/:username' => 'users#showWithUser' , as: 'userAlt'
 
 
   
