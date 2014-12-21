@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   
-  get '/:username' => 'users#showWithUser'
-  
   get 'vcard/view'
   
   get 'admin/new'
@@ -54,6 +52,8 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  
+  get '/:username' => 'users#showWithUser'
 
 
   

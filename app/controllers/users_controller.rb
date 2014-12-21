@@ -30,10 +30,6 @@ class UsersController < ApplicationController
   
   def showWithUser
     @user = User.find_by_username(params[:username])
-    if(@user == nil)
-      newPath = :username + "_path"
-      redirect_to newPath
-    end  
   end
   
   def index
