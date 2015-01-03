@@ -274,6 +274,6 @@ Devise.setup do |config|
   
     #Add your ID and secret here
     #ID first, secret second
-    config.omniauth :twitter, "4HDIgu5sXp1NkhvHQpDGsrylM", "E6XAWLujVciaQZoDYrDctQwmbKlfY2oBrmbsDy9ikiE3yYqSna"
+    config.omniauth :twitter, "2166605562", "E6XAWLujVciaQZoDYrDctQwmbKlfY2oBrmbsDy9ikiE3yYqSna"
   end
 end
