@@ -74,15 +74,7 @@ gem 'bcrypt-ruby', '~> 3.1.5'
 gem 'rails_12factor', '~> 0.0.3'
 gem 'tzinfo-data'
 gem 'therubyracer'
-gem 'devise'
-gem 'omniauth'
-gem 'omniauth-twitter'
-gem 'omniauth-facebook'
-gem 'omniauth-linkedin'
-gem 'nifty-generators'
 
 #gem 'sqlite3', '~>1.3.10'
 gem 'bundler', '~> 1.6.3'
 #gem 'bundler', '~> 1.7.9'
-
-gem "mocha", group: :test
