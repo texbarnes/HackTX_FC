@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def create
       @user = User.new(user_params)
 
-      if @user.save
+    if @user.save
         log_in @user
         flash[:success] = "Welcome to ForeverCard!"
         redirect_to @user
@@ -51,7 +51,7 @@ class UsersController < ApplicationController
       render 'edit'
       # Can change this to 'update' ?
     end
-end
+  end
 
   def destroy
     User.find(params[:id]).destroy

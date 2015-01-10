@@ -90,6 +90,7 @@ GEM
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     mustache (0.99.7)
+    nifty-generators (0.4.6)
     oauth (0.4.7)
     oauth2 (1.0.0)
       faraday (>= 0.8, < 0.10)
@@ -225,6 +226,7 @@ DEPENDENCIES
   mail (~> 2.6.1)
   minitest (~> 5.4.2)
   mustache (~> 0.99.6)
+  nifty-generators
   omniauth
   omniauth-facebook
   omniauth-linkedin
