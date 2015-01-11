@@ -17,23 +17,24 @@
   </div>
 </div>
 
-<div class="widthcap clearfix">
-  <%= form_for :order, url: orders_path, :html => { :class => 'col-xs-12' } do |f| %>
-  
-      <div class="col-sm-6">
-        <div class="row">
-        
-         <div class="form-group">
-            <%= f.label :quantity %>
-            <%= f.select(:quantity, {image_tag("http://i60.tinypic.com/2cr8xs4.jpg")=> 1}, {}, :class => 'form-control') %>
-        </div>
-        
-        </div>
-      </div>
-      
-      <div class="col-sm-6">
-        <%= f.submit 'Submit this order', :class => 'btn btn-primary' %>
+<table class="table">
+  <tr>
+    <th>Design</th>
+    <th colspan="4">Select</th>
+  </tr>
+ 
+  <% cardDesigns.each do|name,design| %>
+    <tr>
+      <td><%= image_tag(design) %></td>
+      <td><%=form_for :order, url: {action: "update"}, method: :patch, :html => { :class => 'col-xs-12' } do |f|%>
+              <div class="form-group col-md-6">
+                <%= f.check_box :processed, :class => 'form-control' %>
+              </div>
+      <div class="col-sm-12">
+      <%= f.submit 'Save', :class => 'btn btn-primary' %>
     </div>
-  <% end %>
+     <% end %></td>
 
-</div>
+      
+  <% end %>
+</table>
