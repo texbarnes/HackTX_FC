@@ -27,5 +27,10 @@
     
 <% form_for :order , :html => { :multipart => true } do |f| %>
             <%= f.label :image %>
-            <%= f.file_field :image , :class => 'form-control' %>   
+            <%= f.file_field :image , :class => 'form-control' %>  
+            
+            <div class="form-group">
+          <%= f.label :quantity %>
+          <%= f.select(:quantity, { "100" => 100, "250" => 250, "500" => 500 }, {}, :class => 'form-control') %>
+        </div>
 <% end %>
