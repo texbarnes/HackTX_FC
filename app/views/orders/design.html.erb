@@ -23,8 +23,10 @@
 </div>
 
 <% cardDesigns.each do|name,design| %>
-<%= radio_button_tag(:order, name) %>
-<%= label_tag(:order, image_tag(design)) %>
+    <div class="row">
+        <%= radio_button_tag(:order, name) %>
+        <%= label_tag(:order, image_tag(design)) %>
+    </div>
 <% end %>
 
 <table class="table">
