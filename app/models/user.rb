@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  
+  attr_accessible :username , :first , :last , :email , :password , :phone , :role , :bio , :facebook , :twitter , :linkedin , :org
 
   validates :username, presence: true,
                     length: { minimum: 2 },
