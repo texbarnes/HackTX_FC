@@ -74,6 +74,7 @@ gem 'bcrypt-ruby', '~> 3.1.5'
 gem 'rails_12factor', '~> 0.0.3'
 gem 'tzinfo-data'
 gem 'therubyracer'
+gem 'protected_attributes'
 
 #gem 'sqlite3', '~>1.3.10'
 gem 'bundler', '~> 1.6.3'
