@@ -4,8 +4,8 @@ class OrdersController < ApplicationController
   end
   
   def design
-    cardDesigns = Hash.new
-    cardDesigns["Eclipse"] = "http://i60.tinypic.com/2cr8xs4.jpg"
+    @cardDesigns = Hash.new
+    @cardDesigns["Eclipse"] = "http://i60.tinypic.com/2cr8xs4.jpg"
   end
   
   def create
