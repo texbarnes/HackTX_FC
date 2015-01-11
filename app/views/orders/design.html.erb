@@ -25,7 +25,7 @@
 
 
 <div class="widthcap clearfix">   
-    <% form_for :order , :html => { :multipart => true } do |f| %>
+    <%= form_for :order, url: orders_path, :html => { :class => 'col-xs-12' } do |f| %>
                 <%= f.label :image %>
                 <%= f.file_field :image , :class => 'form-control' %>  
                 
