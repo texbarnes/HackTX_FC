@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 20150102175917) do
     t.string   "uid"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  #add_index "users", ["email"], name: "index_users_on_email", unique: true
+  a#dd_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end
