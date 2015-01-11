@@ -31,14 +31,15 @@
   <% cardDesigns.each do|name,design| %>
     <tr>
       <td><%= image_tag(design) %></td>
-      <td><%=form_for :order, url: {action: "update"}, method: :patch, :html => { :class => 'col-xs-12' } do |f|%>
+      <td><%=form_for :order, url: {action: "update"}, method: :patch, :html => { :class => 'col-xs-6' } do |f|%>
               <div class="form-group col-md-6">
                 <%= f.check_box :processed, :class => 'form-control' %>
               </div>
-      <div class="col-sm-12">
-      <%= f.submit 'Save', :class => 'btn btn-primary' %>
-    </div>
      <% end %></td>
+     
+     <div class="col-sm-12">
+      <%= f.submit 'Submit', :class => 'btn btn-primary' %>
+    </div>
 
       
   <% end %>
