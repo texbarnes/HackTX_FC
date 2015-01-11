@@ -26,5 +26,6 @@
 
     
 <% form_for :order , :html => { :multipart => true } do |f| %>
-            <%= f.file_field :image %>   
+            <%= f.label :image %>
+            <%= f.file_field :image , :class => 'form-control' %>   
 <% end %>
