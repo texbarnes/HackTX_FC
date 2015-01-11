@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.2.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -75,6 +75,7 @@ gem 'rails_12factor', '~> 0.0.3'
 gem 'tzinfo-data'
 gem 'therubyracer'
 gem 'protected_attributes'
+gem 'paperclip', github: 'thoughtbot/paperclip'
 
 #gem 'sqlite3', '~>1.3.10'
 gem 'bundler', '~> 1.6.3'

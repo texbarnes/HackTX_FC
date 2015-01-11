@@ -22,11 +22,19 @@
   </div>
 </div>
 
-<% cardDesigns.each do|name,design| %>
-    <div class="row">
+<% form_for :order , :html => { :multipart => true } do |f| %>
+    <% cardDesigns.each do|name,design| %>
         <div class="form-group col-md-6">
-            <%= radio_button_tag(:order, name) %>
-            <%= label_tag(:order, image_tag(design)) %>
+            <div class="row">
+                <%= f.radio_button_tag(:order, name) %>
+                <%= f.label_tag(:order, image_tag(design)) %>
+            </div>
+        </div>
+    <% end %>
+
+    <div class="form-group col-md-6">
+        <div class="row">
+            <%= f.file_field :image %>   
         </div>
     </div>
 <% end %>
