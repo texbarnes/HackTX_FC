@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  get 'orders/design'
   
   get 'vcard/view'
   

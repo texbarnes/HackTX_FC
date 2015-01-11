@@ -3,16 +3,19 @@ class OrdersController < ApplicationController
     @order = Order.new
   end
   
+  def design
+  end
+  
   def create
     @order = Order.new(order_params)
  
     @order.save
     redirect_to @order
- end
+  end
   
   def show
     @order = Order.find(params[:id])
-end
+  end
   
   def index
     @orders = Order.all.reverse
