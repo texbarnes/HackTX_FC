@@ -32,10 +32,6 @@
     </div>
 <% end %>
     
-<% form_for @order , :html => { :multipart => true } do |f| %>
-    <div class="form-group col-md-6">
-        <div class="row">
+<% form_for :order , :html => { :multipart => true } do |f| %>
             <%= f.file_field :image %>   
-        </div>
-    </div>
 <% end %>
