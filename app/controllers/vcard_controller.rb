@@ -21,7 +21,7 @@ class VcardController < ApplicationController
 
 		maker.add_email(@contact.email) 
 		
-		maker.add_url("www.ForeverCard.co/" + @contact.username)
+		maker.add_url("www.forevercard.co/" + @contact.username)
 
 	end
 
