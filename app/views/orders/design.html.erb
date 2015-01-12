@@ -31,10 +31,15 @@
             </div>
         </div>
     <% end %>
-    
-    <div class="form-group col-md-6">
-        <div class="row">
-            <%= f.file_field :image %>    
+    <div class="widthcap clearfix">
+        <div class="form-group col-md-6">
+            <div class="row">
+                <%= f.file_field :image %>    
+            </div>
         </div>
+    </div>
+    
+    <div class="col-sm-6">
+        <%= f.submit 'Submit this order', :class => 'btn btn-primary' %>
     </div>
 <% end %>
