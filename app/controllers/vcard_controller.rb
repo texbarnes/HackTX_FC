@@ -1,6 +1,7 @@
 require 'vpim/vcard'
 
 class VcardController < ApplicationController
+  
   def new
   end
   
@@ -23,6 +24,6 @@ class VcardController < ApplicationController
 	end
 
 	send_data card.to_s, :filename => "contact.vcf"	
-  redirect_to @user
-  
+	redirect_to @user
   end
+end
