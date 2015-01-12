@@ -3,6 +3,7 @@ class OrderStepsController < ApplicationController
     steps :design, :details, :payment
     
     def show
+        @user = current_user
         render_wizard
     end
 end
