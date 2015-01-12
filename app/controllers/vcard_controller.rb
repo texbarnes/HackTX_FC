@@ -23,7 +23,7 @@ class VcardController < ApplicationController
 		
 		maker.add_url("www.forevercard.co/" + @contact.username)
 		
-		maker.add_note("If this contact is out of date, click the ForeverCard URL above to update. ~ForeverCard | " + @contact.bio)
+		maker.add_note("If this contact is out of date, click the ForeverCard URL above to update. \r\n \r\n Thanks for using ForeverCard!")
 
 	end
 
