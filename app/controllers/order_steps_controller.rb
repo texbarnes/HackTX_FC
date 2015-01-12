@@ -3,7 +3,13 @@ class OrderStepsController < ApplicationController
     steps :design, :details, :payment
     
     def show
-        @user = current_user
+        @order = Order.new
         render_wizard
+    end
+    
+    def update
+        @order = Order.find(params[:id])
+        @order.attributes = params[]
+        render_wizard @order
     end
 end
