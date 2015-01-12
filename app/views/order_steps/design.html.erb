@@ -22,12 +22,12 @@
   </div>
 </div>
 
-<%= form_for :order, url: wizard_path, :html => { :multipart => true } do |f| %>
+<%= form_for :order , url: wizard_path, :html => { :multipart => true } do |f| %>
     <% cardDesigns.each do|name,design| %>
         <div class="form-group col-md-6">
             <div class="row">
-                <%= f.radio_button :contactmethod, 'paperStock' %>
-                <%= f.label :contactmethod, image_tag(design), :value => image_tag(design) %>
+                <%= f.label :order, image_tag(design), :value => design %>
+                <%= f.radio_button :order, design %>
             </div>
         </div>
     <% end %>
@@ -40,6 +40,6 @@
     </div>
     
     <div class="col-sm-6">
-        <%= f.submit 'Submit this order', :class => 'btn btn-primary' %>
+        <%= f.submit 'Continue', :class => 'btn btn-primary' %>
     </div>
 <% end %>
