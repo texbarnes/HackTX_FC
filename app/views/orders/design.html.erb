@@ -27,14 +27,13 @@
         <div class="form-group col-md-6">
             <div class="row">
                 <%= radio_button_tag(:order, name) %>
-                <%= label_tag(:order, image_tag(design)) %>
+                <%= f.label_tag(:order, image_tag(design)) %>
             </div>
         </div>
     <% end %>
     
     <div class="form-group col-md-6">
         <div class="row">
-            <%= f.label :UploadImage %>
             <%= f.file_field :image %>    
         </div>
     </div>
