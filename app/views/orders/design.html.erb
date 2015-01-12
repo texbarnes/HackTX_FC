@@ -22,12 +22,20 @@
   </div>
 </div>
 
-    <%= form_for :order, url: orders_path, :html => { :multipart => true } do |f| %>
-                <%= f.label :image %>
-                <%= f.file_field :image %>  
-                
-                <div class="form-group">
-              <%= f.label :quantity %>
-              <%= f.select(:quantity, { "100" => 100, "250" => 250, "500" => 500 }, {}, :class => 'form-control') %>
+<%= form_for :order, url: orders_path, :html => { :multipart => true } do |f| %>
+    <% cardDesigns.each do|name,design| %>
+        <div class="form-group col-md-6">
+            <div class="row">
+                <%= radio_button_tag(:order, name) %>
+                <%= label_tag(:order, image_tag(design)) %>
             </div>
+        </div>
     <% end %>
+    
+    <div class="form-group col-md-6">
+        <div class="row">
+            <%= f.label :UploadImage %>
+            <%= f.file_field :image %>    
+        </div>
+    </div>
+<% end %>
