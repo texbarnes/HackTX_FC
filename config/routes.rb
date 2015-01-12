@@ -43,6 +43,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   
   resources :orders
+  resources :order_steps
   
   root 'welcome#index'
 
