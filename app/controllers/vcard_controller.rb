@@ -1,6 +1,9 @@
 require 'vpim/vcard'
 
 class VcardController < ApplicationController
+  def new
+  end
+  
   def show
   
   @contact = User.find_by_id(params[:id])  
@@ -15,13 +18,11 @@ class VcardController < ApplicationController
 
 		maker.add_tel(@contact.phone)
 
-		maker.add_email(@contact.email) { |e| e.location = 'work' }
+		maker.add_email(@contact.email) 
 
 	end
 
 	send_data card.to_s, :filename => "contact.vcf"	
   redirect_to @user
+  
   end
-
-
-
