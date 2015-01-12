@@ -24,7 +24,6 @@ class VcardController < ApplicationController
 	end
 
 	send_data card.to_s, :filename => "contact.vcf"	
-	redirect_to @contact
 	
   end
 end
