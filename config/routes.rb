@@ -44,6 +44,7 @@ Rails.application.routes.draw do
   
   resources :orders
   resources :order_steps
+  resources :vcard
   
   root 'welcome#index'
 
