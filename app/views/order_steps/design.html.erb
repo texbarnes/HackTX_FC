@@ -26,8 +26,8 @@
     <% cardDesigns.each do|name,design| %>
         <div class="form-group col-md-6">
             <div class="row">
-                <%= f.label :order, image_tag(design), :value => design %>
-                <%= f.radio_button :order, design %>
+                <%= f.label image_tag(design), :value => design %>
+                <%= #f.radio_button :order, design %>
             </div>
         </div>
     <% end %>
