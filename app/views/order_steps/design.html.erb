@@ -34,7 +34,8 @@
     <div class="widthcap clearfix">
         <div class="form-group col-md-6">
             <div class="row">
-                <%= f.file_field :image %>    
+                <%= f.radio_button :design, :value => :image %>
+                <%= f.label :image, :value => f.file_field :image %>    
             </div>
         </div>
     </div>
