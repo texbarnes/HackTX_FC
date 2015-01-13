@@ -37,16 +37,20 @@
     </div>
 <% end %>
 
+<p>
+  ----------OR----------               
+</p>
+
 <%= form_for :order , url: wizard_path, :html => { :multipart => true } do |f| %>
     <div class="widthcap clearfix">
         <div class="form-group col-md-6">
             <div class="row">
-                <%= f.file_field :image %>    
+                <%= f.file_field :image %> 
+                <p>
+                  
+                </p>
+                <%= f.submit 'Continue', :class => 'btn btn-primary' %>
             </div>
         </div>
-    </div>
-    
-    <div class="col-sm-6">
-        <%= f.submit 'Continue', :class => 'btn btn-primary' %>
     </div>
 <% end %>
