@@ -4,14 +4,14 @@ class OrderStepsController < ApplicationController
     
     
     def show
-        @order = Order.find(125)
+        @order = Order.find(params[:order_id])
         render_wizard
     end
     
     def update
         @order = Order.find(125)
         @order.update_attributes(params[:order])
-        redirect_to next_wizard_path
+        redirect_to wizard_path(next_step, :order_id => 125)
     end
     
     def create
