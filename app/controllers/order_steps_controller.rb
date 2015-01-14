@@ -9,8 +9,8 @@ class OrderStepsController < ApplicationController
     end
     
     def update
-        @order = Order.find(params[:id])
-        @order.attributes = params[:order]
+        @order = Order.find(params[:order_id])
+        @order.update_attributes(params[:order])
         render_wizard @order
     end
     
