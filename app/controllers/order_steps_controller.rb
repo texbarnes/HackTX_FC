@@ -11,7 +11,7 @@ class OrderStepsController < ApplicationController
     def update
         @order = Order.find(125)
         @order.update_attributes(params[:order])
-        redirect_to wizard_path(next_step, :order_id => 125)
+        redirect_to wizard_path(next_step, :order_id => @order.id)
     end
     
     def create
