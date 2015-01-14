@@ -17,7 +17,7 @@
 <div class="row header widthcap">
   <div class="col-xs-12">
     <div class="col-xs-12">
-      <h1>Design ForeverCards</h1>
+      <h1>Design ForeverCards, Order ID is <%= @order.id %></h1>
     </div>
   </div>
 </div>
@@ -26,7 +26,6 @@
     <% cardDesigns.each do|name,design| %>
         <div class="form-group col-md-6">
             <div class="row">
-                Order ID is <%= @order.id %> 
                 <%= f.radio_button :design, :value => design %>
                 <%= f.label :design, image_tag(design) %>
             </div>
