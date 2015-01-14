@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
   resources :order_steps
   
+  post 'order_steps/design'
+  
   get 'vcard/show'
   
   get 'admin/new'
