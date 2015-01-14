@@ -22,7 +22,7 @@
   </div>
 </div>
 
-<%= form_for :order , url: wizard_path(:design, :order_id => @order.id), method: :put , :html => { :multipart => true } do |f| %>
+<%= form_for :order , url: wizard_path(@order.id), method: :put , :html => { :multipart => true } do |f| %>
     <% cardDesigns.each do|name,design| %>
         <div class="form-group col-md-6">
             <div class="row">
