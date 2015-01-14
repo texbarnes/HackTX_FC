@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  get 'orders/design'
+  resources :order_steps
   
   get 'vcard/show'
   
@@ -43,7 +43,6 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   
   resources :orders
-  resources :order_steps
   resources :vcard
   
   root 'welcome#index'
