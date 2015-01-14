@@ -2,8 +2,6 @@ Rails.application.routes.draw do
   
   resources :order_steps
   
-  post 'order_steps/design' => 'order_steps#update'
-  
   get 'vcard/show'
   
   get 'admin/new'

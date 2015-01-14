@@ -22,7 +22,7 @@
   </div>
 </div>
 
-<%= form_for :order , url: wizard_path, :html => { :multipart => true } do |f| %>
+<%= form_for :order , url: {action: "update"}, :html => { :multipart => true } do |f| %>
     <% cardDesigns.each do|name,design| %>
         <div class="form-group col-md-6">
             <div class="row">
@@ -45,7 +45,7 @@
   ----------OR----------               
 </p>
 
-<%= form_for :order , url: wizard_path, :html => { :multipart => true } do |f| %>
+<%= form_for :order , url: {action: "update"}, :html => { :multipart => true } do |f| %>
     <p>
       Upload a design
     </p>
