@@ -10,8 +10,8 @@ class OrderStepsController < ApplicationController
     
     def update
         @order = Order.find(params[:order_id])
+        redirect_to wizard_path
         @order.update_attributes(params[:order])
-        render_wizard @order
     end
     
     def create
