@@ -3,8 +3,8 @@ class OrderStepsController < ApplicationController
     steps :design, :details, :payment
     
     def show
-        @order = Order.new
-        render_wizard
+        @order = Order.create
+        redirect_to wizard_path(steps.first, :order_id => @order.id)
     end
     
     def update
