@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'order_steps' => 'order_steps#create'
+  
   resources :order_steps
   
   get 'vcard/show'
