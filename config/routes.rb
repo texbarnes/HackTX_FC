@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   
   resources :order_steps
   
+  resources :charges
+  
   get 'vcard/show'
   
   get 'admin/new'
