@@ -22,12 +22,12 @@
   <%= form_for :order , url: wizard_path(:details, :order_id => @order.id), method: :put do |f| %>
   
         <div class="row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-4">
                 <%= f.label :quantity %>
                 <%= f.select(:quantity, { "100" => 100, "250" => 250, "500" => 500 }, {}, :class => 'form-control') %>
             </div>
             
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-4">
                 <%= f.label :paperStock %>
                 <%= f.select(:paperStock, { "Matte  $" => "Matte", 
                                         "Premium Matte  $$" => "Premium Matte",
@@ -36,8 +36,8 @@
                                         "Premium Glossy  $$$" => "Premium Glossy"}, {}, :class => 'form-control')%>
             </div>
             
-            <div class="form-group col-md-6">
-                <%= f.label :quantity %>
+            <div class="form-group col-md-4">
+                <%= f.label :quantity, 'Shipping' %>
                 <%= f.select(:quantity, { "100" => 100, "250" => 250, "500" => 500 }, {}, :class => 'form-control') %>
             </div>
         </div>
@@ -55,9 +55,21 @@
             
             <div class="form-group col-md-1">
                 <%= f.label :state, 'State' %>
-                <%= select_tag :state, options_for_select(us_states) %>
+                <%= select_tag :state, options_for_select(us_states), :class => 'form-control' %>
             </div>
-        </div>        
+        </div>
+        
+        <div class="row">
+            <div class="form-group col-md-6">
+                <%= f.label :address2, 'Address Line 2 (if applicable)' %>
+                <%= f.text_field :address2, :class => 'form-control' %>
+            </div>
+            
+            <div class="form-group col-md-3">
+                <%= f.label :zip, 'Zip Code' %>
+                <%= f.text_field :zip, :class => 'form-control' %>
+            </div>
+        </div>
         
      <div class="col-sm-6">
         <%= f.submit 'Next Step: Payment', :class => 'btn btn-primary' %>
