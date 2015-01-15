@@ -3,13 +3,15 @@ module OrderStepsHelper
     def getShipping(quantity)
         if(quantity == 100)
             @shipping = 6.99
-        end  
-        
-        if(quantity == 250)
+        elsif(quantity == 250)
             @shipping = 9.99
         else
             @shipping = 12.99
         end
+    end
+    
+    def getTax(orderAmount, shipping)
+        @tax = (orderAmount + shipping)*0.0825
     end    
     
     def us_states
