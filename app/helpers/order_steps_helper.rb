@@ -11,11 +11,12 @@ module OrderStepsHelper
     end
     
     def getTax(orderAmount, shipping)
-        @tax = (orderAmount + shipping)*0.0825
+        @tax = 0.00
     end
     
     def getTotal(orderAmount, shipping, tax)
         @total = orderAmount + shipping + tax
+        @total = @total.round(2)
     end 
     
     def us_states

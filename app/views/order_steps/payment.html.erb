@@ -55,7 +55,7 @@
             
             <div class="text-right">
                 <% getTax(orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s], @shipping) %>
-                $<%= @tax.round(2) %>
+                $<%= @tax %>
             </div>
         </div>
         
