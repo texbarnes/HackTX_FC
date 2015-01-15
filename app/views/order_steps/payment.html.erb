@@ -35,6 +35,30 @@
   </div>
 </div>
 
+<div class="widthcap card">
+  <div class="card-inner">
+    <div class="row">
+        <div class="text-right">
+            <%= @order.quantity.to_s + " '" + @order.paperStock + "'"%> Business Cards
+        </div> 
+        
+        <div class="text-left">
+            $<%= orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s] %>.00
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="text-right">
+            + Shipping
+        </div> 
+        
+        <div class="text-left">
+            $<%= orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s] %>.00
+        </div>
+    </div>
+  </div>
+</div>  
+
 <%= form_tag charges_path do %>
   <article>
     <label class="amount">
