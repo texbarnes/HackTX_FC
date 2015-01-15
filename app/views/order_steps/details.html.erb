@@ -13,7 +13,7 @@
 <div class="row header widthcap">
   <div class="col-xs-12">
     <div class="col-xs-12">
-      <h1>Order ForeverCards Step 2/4: Order Details, Order ID is <%= :order_id %></h1>
+      <h1>Order ForeverCards Step 2/4: Order Details %></h1>
     </div>
   </div>
 </div>
@@ -22,6 +22,7 @@
   <%= form_for :order , url: wizard_path(:details, :order_id => @order.id), method: :put do |f| %>
   
         <div class="row">
+            <h1>Shipping Information</h1>
             <div class="form-group col-md-6">
                 <%= f.label :quantity %>
                 <%= f.select(:quantity, { "100" => 100, "250" => 250, "500" => 500 }, {}, :class => 'form-control') %>
@@ -39,7 +40,7 @@
         </div>
         
         <div class="row">
-            <div class="form-group col-md-8">
+            <div class="form-group col-md-7">
                 <%= f.label :address1, 'Address Line 1' %>
                 <%= f.text_field :address1, :class => 'form-control' %>
             </div>
@@ -49,19 +50,19 @@
                 <%= f.text_field :city, :class => 'form-control' %>
             </div>
             
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-2">
                 <%= f.label :state, 'State' %>
                 <%= select_tag :state, options_for_select(us_states), :class => 'form-control' %>
             </div>
         </div>
         
         <div class="row">
-            <div class="form-group col-md-8">
+            <div class="form-group col-md-7">
                 <%= f.label :address2, 'Address Line 2 (if applicable)' %>
                 <%= f.text_field :address2, :class => 'form-control' %>
             </div>
             
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-5">
                 <%= f.label :zip, 'Zip Code' %>
                 <%= f.text_field :zip, :class => 'form-control' %>
             </div>
