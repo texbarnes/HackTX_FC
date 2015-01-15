@@ -1,5 +1,5 @@
 <% title 'Order Payment - ForeverCard' %>
-<% style 'register' %>
+<% style 'card.css' %>
 
 <% orderAmounts = Hash.new %>
 <% orderAmounts["Matte 100"] = 15 %>
@@ -38,21 +38,21 @@
 <div class="widthcap card">
   <div class="card-inner">
     <div class="row">
-        <div class="text-right">
+        <div class="text-left">
             <%= @order.quantity.to_s + " '" + @order.paperStock + "'"%> Business Cards
         </div> 
         
-        <div class="text-left">
+        <div class="text-right">
             $<%= orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s] %>.00
         </div>
     </div>
     
     <div class="row">
-        <div class="text-right">
+        <div class="text-left">
             + Shipping
         </div> 
         
-        <div class="text-left">
+        <div class="text-right">
             $<%= orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s] %>.00
         </div>
     </div>
@@ -84,3 +84,5 @@
         </div>
     </div>
 </div>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
