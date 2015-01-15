@@ -44,7 +44,7 @@
             
             <div class="text-right">
                 <% getShipping(@order.quantity) %>
-                <%= @shipping %>
+                $<%= @shipping %>
             </div>
         </div>
         
@@ -55,7 +55,7 @@
             
             <div class="text-right">
                 <% getTax(orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s], @shipping) %>
-                <%= @tax %>
+                $<%= @tax.round(2) %>
             </div>
         </div>
         
