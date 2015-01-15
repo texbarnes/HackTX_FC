@@ -1,4 +1,17 @@
 module OrderStepsHelper
+    
+    def getShipping(quantity)
+        if(quantity == 100)
+            @shipping = 6.99
+        end  
+        
+        if(quantity == 250)
+            @shipping = 9.99
+        else
+            @shipping = 12.99
+        end
+    end    
+    
     def us_states
     [
       ['Alabama', 'AL'],
