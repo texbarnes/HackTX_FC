@@ -35,32 +35,27 @@
   </div>
 </div>
 
-<% style 'card.css' %>
-    <div class="widthcap card">
-      <div class="card-inner">
-        <div class="row">
-            <div class="text-left">
-                <%= @order.quantity.to_s + " '" + @order.paperStock + "'"%> Business Cards
-            </div> 
-            
-            <div class="text-right">
-                $<%= orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s] %>.00
-            </div>
-        </div>
+<%= form_tag charges_path do %>
+    <div class="row">
+        <div class="text-left">
+            <%= @order.quantity.to_s + " '" + @order.paperStock + "'"%> Business Cards
+        </div> 
         
-        <div class="row">
-            <div class="text-left">
-                + Shipping
-            </div> 
-            
-            <div class="text-right">
-                $69.00
-            </div>
+        <div class="text-right">
+            $<%= orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s] %>.00
         </div>
-      </div>
+    </div>
+    
+    <div class="row">
+        <div class="text-left">
+            + Shipping
+        </div> 
+        
+        <div class="text-right">
+            $69.00
+        </div>
     </div>
 
-<%= form_tag charges_path do %>
   <article>
     <label class="amount">
       <span>Amount: $<%= orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s] %>.00 </span>
