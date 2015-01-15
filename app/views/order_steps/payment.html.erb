@@ -1,5 +1,5 @@
 <% title 'Order Payment - ForeverCard' %>
-<% style 'register' %>
+<% style 'card.css' %>
 
 <% orderAmounts = Hash.new %>
 <% orderAmounts["Matte 100"] = 15 %>
@@ -18,56 +18,48 @@
 <% orderAmounts["Premium Glossy 250"] = 32 %>
 <% orderAmounts["Premium Glossy 500"] = 54 %>
 
-<nav class="navbar navbar-inverse" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a href="/" class="navbar-brand">ForeverCard</a>
-    </div>
-
-  </div>
-</nav>
-
-<div class="row header widthcap">
-  <div class="col-xs-12">
-    <div class="col-xs-12">
-      <h1>Step 3/3: Confirmation and Payment</h1>
-    </div>
-  </div>
+<div class="row">
+    <div class="text-center">
+        <h1>Step 3/3: Confirmation and Payment</h1>
+    </div> 
 </div>
 
-<%= form_tag charges_path do %>
-    <div class="row">
-        <div class="text-left">
-            <%= @order.quantity.to_s + " '" + @order.paperStock + "'"%> Business Cards
-        </div> 
-        
-        <div class="text-right">
-            $<%= orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s] %>.00
+<div class="widthcap card">
+  <div class="card-inner">
+    <%= form_tag charges_path do %>
+        <div class="row">
+            <div class="text-left">
+                <%= @order.quantity.to_s + " '" + @order.paperStock + "'"%> Business Cards
+            </div> 
+            
+            <div class="text-right">
+                $<%= orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s] %>.00
+            </div>
         </div>
-    </div>
-    
-    <div class="row">
-        <div class="text-left">
-            + Shipping
-        </div> 
         
-        <div class="text-right">
-            $69.00
+        <div class="row">
+            <div class="text-left">
+                + Shipping
+            </div> 
+            
+            <div class="text-right">
+                $69.00
+            </div>
         </div>
+        
+          <article>
+            <label class="amount">
+              <span>Amount: $<%= orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s] %>.00 </span>
+            </label>
+          </article>
+        
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-description="One time payment"
+                  data-amount="500"></script>
+        <% end %>
     </div>
-
-  <article>
-    <label class="amount">
-      <span>Amount: $<%= orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s] %>.00 </span>
-    </label>
-  </article>
-
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="One time payment"
-          data-amount="500"></script>
-<% end %>
-<% style 'register' %>
+</div>
 <p>
     
 </p>
