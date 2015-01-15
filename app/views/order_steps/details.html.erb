@@ -1,1 +1,43 @@
-details
+<% title 'Design - ForeverCard' %>
+<% style 'register' %>
+
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="/" class="navbar-brand">ForeverCard</a>
+    </div>
+
+  </div>
+</nav>
+
+<div class="row header widthcap">
+  <div class="col-xs-12">
+    <div class="col-xs-12">
+      <h1>Order ForeverCards Step 2/4: Order Details, Order ID is <%= :order_id %></h1>
+    </div>
+  </div>
+</div>
+
+<div class="widthcap clearfix">
+  <%= :order , url: wizard_path(:details, :order_id => @order.id), method: :put do |f| %>
+  
+        <div class="row">
+            <div class="form-group col-md-6">
+                <%= f.label :quantity %>
+                <%= f.select(:quantity, { "100" => 100, "250" => 250, "500" => 500 }, {}, :class => 'form-control') %>
+            </div>
+            
+            <div class="form-group col-md-6">
+                <%= f.label :paperStock %>
+                <%= f.select(:paperStock, { "Matte  $" => "Matte", 
+                                        "Premium Matte  $$" => "Premium Matte",
+                                        "Glossy  $$" => "Glossy",
+                                        "Recycled Matte  $$$" => "Recycled Matte",
+                                        "Premium Glossy  $$$" => "Premium Glossy"}, {}, :class => 'form-control')%>
+            </div>
+        </div>
+        
+     <div class="col-sm-6">
+        <%= f.submit 'Next Step: Payment', :class => 'btn btn-primary' %>
+     </div>
+  <% end %>
