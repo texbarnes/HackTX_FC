@@ -14,7 +14,7 @@ module OrderStepsHelper
         @tax = (orderAmount + shipping)*0.0825
     end
     
-    def getTax(orderAmount, shipping, tax)
+    def getTotal(orderAmount, shipping, tax)
         @total = orderAmount + shipping + tax
     end 
     
