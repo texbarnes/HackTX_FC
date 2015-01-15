@@ -35,7 +35,29 @@
                                         "Recycled Matte  $$$" => "Recycled Matte",
                                         "Premium Glossy  $$$" => "Premium Glossy"}, {}, :class => 'form-control')%>
             </div>
+            
+            <div class="form-group col-md-6">
+                <%= f.label :quantity %>
+                <%= f.select(:quantity, { "100" => 100, "250" => 250, "500" => 500 }, {}, :class => 'form-control') %>
+            </div>
         </div>
+        
+        <div class="row">
+            <div class="form-group col-md-6">
+                <%= f.label :address1, 'Address Line 1' %>
+                <%= f.text_field :address1, :class => 'form-control' %>
+            </div>
+            
+            <div class="form-group col-md-2">
+                <%= f.label :city, 'City' %>
+                <%= f.text_field :city, :class => 'form-control' %>
+            </div>
+            
+            <div class="form-group col-md-1">
+                <%= f.label :state, 'State' %>
+                <%= select(:state, options_for_select(us_states) %>
+            </div>
+        </div>        
         
      <div class="col-sm-6">
         <%= f.submit 'Next Step: Payment', :class => 'btn btn-primary' %>
