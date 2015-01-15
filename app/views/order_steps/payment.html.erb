@@ -47,16 +47,40 @@
             </div>
         </div>
         
-          <article>
-            <label class="amount">
-              <span>Amount: $<%= orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s] %>.00 </span>
-            </label>
-          </article>
+        <div class="row">
+            <div class="text-left">
+                + Tax
+            </div> 
+            
+            <div class="text-right">
+                $0.69
+            </div>
+        </div>
         
-          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                  data-description="One time payment"
-                  data-amount="500"></script>
+        <div class="row">
+            <div class="text-right">
+                ---------------
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="text-left">
+                Total
+            </div> 
+            
+            <div class="text-right">
+                $1 billion
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="text-right">
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                      data-description="One time payment"
+                      data-amount="500"></script>
+            </div>
+        </div>
         <% end %>
     </div>
 </div>
