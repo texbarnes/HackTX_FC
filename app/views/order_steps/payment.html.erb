@@ -75,7 +75,9 @@
                 $<%= @total %>
             </div>
         </div>
-        
+        <p>
+    
+        </p>
         <div class="row">
             <div class="text-right">
               <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -95,7 +97,15 @@
 <div class="text-primary">
     <div class = "col">
         <div class="text-center">
-            <%= image_tag("http://i57.tinypic.com/2namw5h.png")%> This payment is secure. Learn more <u><b><%=link_to 'here', 'https://stripe.com/help/security', :target => "_blank" %> </b></u>
+            <%= image_tag("http://i57.tinypic.com/2namw5h.png")%> 
+        </div>
+    </div>
+</div>
+
+<div class="text-primary">
+    <div class = "col">
+        <div class="text-center">
+            This payment is secure. Learn more <u><b><%=link_to 'here', 'https://stripe.com/help/security', :target => "_blank" %> </b></u>
         </div>
     </div>
 </div>
