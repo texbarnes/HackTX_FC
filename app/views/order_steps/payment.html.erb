@@ -28,35 +28,32 @@
   <div class="card-inner">
     <%= form_tag charges_path do %>
         <div class="row">
-            <div class="text-left">
+            <div style="float:left;">
                 <%= @order.quantity.to_s + " '" + @order.paperStock + "'"%> Business Cards
-            </div> 
-            
-            <div class="text-right">
-                $<%= orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s] %>.00
-            </div>
+             </div>  
+             <div style="float:right;">
+                $<%= orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s] %>.00 
+             </div>
         </div>
         
         <div class="row">
-            <div class="text-left">
+            <div style="float:left;">
                 + Shipping
-            </div> 
-            
-            <div class="text-right">
+             </div>  
+             <div style="float:right;">
                 <% getShipping(@order.quantity) %>
                 $<%= @shipping %>
-            </div>
+             </div>
         </div>
         
         <div class="row">
-            <div class="text-left">
-                + Tax
-            </div> 
-            
-            <div class="text-right">
+            <div style="float:left;">
+               + Tax
+             </div>  
+             <div style="float:right;">
                 <% getTax(orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s], @shipping) %>
                 $<%= @tax %>
-            </div>
+             </div>
         </div>
         
         <div class="row">
@@ -66,14 +63,13 @@
         </div>
         
         <div class="row">
-            <div class="text-left">
-                Total
-            </div> 
-            
-            <div class="text-right">
+            <div style="float:left;">
+               Total
+             </div>  
+             <div style="float:right;">
                 <% getTotal(orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s], @shipping, @tax.to_i) %>
                 $<%= @total %>
-            </div>
+             </div>
         </div>
         <p>
     
