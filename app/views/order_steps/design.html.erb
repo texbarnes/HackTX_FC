@@ -32,9 +32,12 @@
         </div>
     <% end %>
     
-    <div class="col-sm-6">
-        <%= f.submit 'Next: Order Details', :class => 'btn btn-primary' %>
-    </div>
+    <div style="float:left;">
+        <a class="btn btn-primary" type="button" href=<%= root_path %>>Cancel This Order</a>
+     </div>  
+     <div style="float:right;">
+        <%= f.submit 'Next: Order Details', :class => 'btn btn-primary' %> 
+     </div>
 <% end %>
 
 <p>
