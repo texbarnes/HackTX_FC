@@ -11,6 +11,10 @@ module OrderStepsHelper
     end
     
     def getTax(orderAmount, shipping)
+        @subtotal = orderAmount + shipping
+    end
+    
+    def getTax(orderAmount, shipping)
         @tax = "0.00"
     end
     

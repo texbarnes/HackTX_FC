@@ -18,6 +18,15 @@
 <% orderAmounts["Premium Glossy 250"] = 32 %>
 <% orderAmounts["Premium Glossy 500"] = 54 %>
 
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="/" class="navbar-brand">ForeverCard</a>
+    </div>
+
+  </div>
+</nav>
+
 <div class="row">
     <div class="text-center">
         <h1>Step 3/3: Confirmation and Payment</h1>
@@ -43,6 +52,22 @@
              <div style="float:right;">
                 <% getShipping(@order.quantity) %>
                 $<%= @shipping %>
+             </div>
+        </div>
+        
+        <div class="row">
+            <div class="text-right">
+                ---------------
+            </div>
+        </div>
+        
+        <div class="row">
+            <div style="float:left;">
+               Subtotal
+             </div>  
+             <div style="float:right;">
+                <% getSubtotal(orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s], @shipping) %>
+                $<%= @subtotal %>
              </div>
         </div>
         
@@ -79,10 +104,10 @@
 <p>
     
 </p>
-<div class="widthcap clearfix">
+<div class="widthcap card">
     <div class="row">
         <div style="float:left;">
-           <a class="btn btn-primary" type="button" href=<%= wizard_path(:details, :order_id => @order.id) %>>Previous Step: Details</a>
+           <a class="btn btn-primary" type="button" href=<%= wizard_path(:details, :order_id => @order.id) %>>Back: Order Details</a>
          </div>  
          <div style="float:right;">
             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -103,7 +128,9 @@
         </div>
     </div>
 </div>
-
+<p>
+    
+</p>
 <div class="text-primary">
     <div class = "col">
         <div class="text-center">
