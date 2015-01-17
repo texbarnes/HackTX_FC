@@ -1,9 +1,9 @@
 <% title 'Design - ForeverCard' %>
 <% style 'register' %>
 <% cardDesigns = Hash.new %>
-<% cardDesigns["Eclipse"] = "http://i60.tinypic.com/2cr8xs4.jpg" %>
-<% cardDesigns["Skyline"] = "http://i60.tinypic.com/2v7v6mt.jpg" %>
-<% cardDesigns["Music"] = "http://i58.tinypic.com/14d0hlk.jpg" %>
+<% cardDesigns["Eclipse"] = "http://i57.tinypic.com/69eybk.jpg" %>
+<% cardDesigns["Skyline"] = "http://i57.tinypic.com/69eybk.jpg" %>
+<% cardDesigns["Music"] = "http://i57.tinypic.com/69eybk.jpg" %>
 
 <nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
@@ -24,8 +24,8 @@
 
 <%= form_for :order , url: wizard_path(:design, :order_id => @order.id), method: :put , :html => { :multipart => true } do |f| %>
     <% cardDesigns.each do|name,design| %>
-        <div class="form-group col-md-6">
-            <div class="row">
+        <div class="row">
+            <div style="float:left;">
                 <%= f.radio_button :design, :value => design %>
                 <%= f.label :design, image_tag(design) %>
             </div>
