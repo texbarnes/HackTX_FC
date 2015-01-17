@@ -5,7 +5,6 @@
 <% cardDesigns["Skyline"] = "http://i57.tinypic.com/69eybk.jpg" %>
 <% cardDesigns["Music"] = "http://i57.tinypic.com/69eybk.jpg" %>
 <% cardDesigns["Random1"] = "http://i57.tinypic.com/69eybk.jpg" %>
-<% cardDesigns["Random2"] = "http://i57.tinypic.com/69eybk.jpg" %>
 
 <nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
@@ -28,7 +27,7 @@
     <%= form_for :order , url: wizard_path(:design, :order_id => @order.id), method: :put , :html => { :multipart => true } do |f| %>
         <div class="row">
             <% cardDesigns.each do|name,design| %>
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <%= f.radio_button :design, :value => design %>
                     <%= f.label :design, image_tag(design) %>
                 </div>
