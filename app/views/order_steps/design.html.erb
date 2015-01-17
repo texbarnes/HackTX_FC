@@ -22,23 +22,25 @@
   </div>
 </div>
 
-<%= form_for :order , url: wizard_path(:design, :order_id => @order.id), method: :put , :html => { :multipart => true } do |f| %>
-    <div class="row">
-        <% cardDesigns.each do|name,design| %>
-            <div style="float:left;">
-                <%= f.radio_button :design, :value => design %>
-                <%= f.label :design, image_tag(design) %>
-            </div>
-        <% end %>
-    </div>
-    
-    <div style="float:left;">
-        <a class="btn btn-primary" type="button" href=<%= root_path %>>Cancel This Order</a>
-     </div>  
-     <div style="float:right;">
-        <%= f.submit 'Next: Order Details', :class => 'btn btn-primary' %> 
-     </div>
-<% end %>
+<div class="widthcap clearfix">
+    <%= form_for :order , url: wizard_path(:design, :order_id => @order.id), method: :put , :html => { :multipart => true } do |f| %>
+        <div class="row">
+            <% cardDesigns.each do|name,design| %>
+                <div style="float:left;">
+                    <%= f.radio_button :design, :value => design %>
+                    <%= f.label :design, image_tag(design) %>
+                </div>
+            <% end %>
+        </div>
+        
+        <div style="float:left;">
+            <a class="btn btn-primary" type="button" href=<%= root_path %>>Cancel This Order</a>
+         </div>  
+         <div style="float:right;">
+            <%= f.submit 'Next: Order Details', :class => 'btn btn-primary' %> 
+         </div>
+    <% end %>
+</div>
 
 <p>
                   
