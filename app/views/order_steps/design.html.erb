@@ -1,14 +1,14 @@
 <% title 'Design - ForeverCard' %>
 <% style 'register' %>
 <% cardDesigns = Hash.new %>
-<% cardDesigns["eclipse"] = "http://i57.tinypic.com/69eybk.jpg" %>
-<% cardDesigns["music"] = "http://i59.tinypic.com/261gemd.jpg" %>
-<% cardDesigns["skyline"] = "http://i62.tinypic.com/1zg6e6w.jpg" %>
-<% cardDesigns["brownFlower"] = "http://i58.tinypic.com/w1ba68.jpg" %>
-<% cardDesigns["dark"] = "http://i60.tinypic.com/15pqqzq.jpg" %>
-<% cardDesigns["brownBasic"] = "http://i60.tinypic.com/10sfxnr.jpg" %>
-<% cardDesigns["feather"] = "http://i61.tinypic.com/oi54c5.jpg" %>
-<% cardDesigns["crown"] = "http://i60.tinypic.com/2jgmyr.jpg" %>
+<% cardDesigns1["eclipse"] = "http://i57.tinypic.com/69eybk.jpg" %>
+<% cardDesigns1["music"] = "http://i59.tinypic.com/261gemd.jpg" %>
+<% cardDesigns1["skyline"] = "http://i62.tinypic.com/1zg6e6w.jpg" %>
+<% cardDesigns1["brownFlower"] = "http://i58.tinypic.com/w1ba68.jpg" %>
+<% cardDesigns2["dark"] = "http://i60.tinypic.com/15pqqzq.jpg" %>
+<% cardDesigns2["brownBasic"] = "http://i60.tinypic.com/10sfxnr.jpg" %>
+<% cardDesigns2["feather"] = "http://i61.tinypic.com/oi54c5.jpg" %>
+<% cardDesigns2["crown"] = "http://i60.tinypic.com/2jgmyr.jpg" %>
 
 <nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
@@ -36,8 +36,20 @@
 <div class="container">
     <%= form_for :order , url: wizard_path(:design, :order_id => @order.id), method: :put , :html => { :multipart => true } do |f| %>
         <div class="row">
-            <h2>-Choose a Template-</h2>
-            <% cardDesigns.each do|name,design| %>
+            <h2>-Classic-</h2>
+            <% cardDesigns1.each do|name,design| %>
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <%= f.radio_button :design, :value => design %>
+                        <%= f.label :design, image_tag(design) %>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+        
+        <div class="row">
+            <h2>-Bold-</h2>
+            <% cardDesigns2.each do|name,design| %>
                 <div class="col-md-3">
                     <div class="text-center">
                         <%= f.radio_button :design, :value => design %>
@@ -48,7 +60,7 @@
         </div>
 
         <div class="row">
-            <h2>- Or Upload a Design-</h2>
+            <h2>-Upload a Design-</h2>
             <div class= "col-md-6">
                 <%= f.file_field :image %> 
             </div>
