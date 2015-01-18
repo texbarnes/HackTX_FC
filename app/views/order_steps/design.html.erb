@@ -36,7 +36,7 @@
 <div class="container">
     <%= form_for :order , url: wizard_path(:design, :order_id => @order.id), method: :put , :html => { :multipart => true } do |f| %>
         <div class="row">
-            <h2>-Classic-</h2>
+            <h2>Choose a Template</h2>
             <% cardDesigns.each do|name,design| %>
                 <div class="col-md-3">
                     <div class="text-center">
@@ -48,7 +48,7 @@
         </div>
 
         <div class="row">
-            <h2>-Upload a Design-</h2>
+            <h2>Or Upload a Design</h2>
             <div class= "col-md-6">
                 <%= f.file_field :image %> 
             </div>
