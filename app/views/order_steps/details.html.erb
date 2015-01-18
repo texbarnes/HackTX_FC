@@ -6,6 +6,15 @@
     <div class="navbar-header">
       <a href="/" class="navbar-brand">ForeverCard</a>
     </div>
+    
+    <% if @order.errors.any? %>
+          <p class="error-notice">Please fix the following <%= pluralize(@order.errors.count, 'error') %>:</p>
+          <ul class="errors">
+            <% @order.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+      <% end %>
 
   </div>
 </nav>
