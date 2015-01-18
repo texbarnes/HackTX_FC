@@ -12,6 +12,7 @@ module OrderStepsHelper
     
     def getSubtotal(orderAmount, shipping)
         @subtotal = orderAmount + shipping
+        @subtotal = @subtotal.round(2)
     end
     
     def getTax(orderAmount, shipping)
