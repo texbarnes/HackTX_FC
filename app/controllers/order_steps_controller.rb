@@ -4,7 +4,7 @@ class OrderStepsController < ApplicationController
     
     
     def show
-        @order = Order.find(150)
+        @order = Order.find(params[:user_id])
         render_wizard
     end
     
@@ -16,6 +16,6 @@ class OrderStepsController < ApplicationController
     
     def create
         @order = Order.create
-        redirect_to wizard_path(steps.first, :order_id => @order.id)
+        redirect_to wizard_path(steps.first, :user_id => @order.user_id)
     end
 end
