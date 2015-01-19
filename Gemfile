@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.0'
+ruby '2.0.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -80,6 +80,6 @@ gem 'wicked'
 gem 'vpim'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
-#gem 'sqlite3', '~>1.3.10'
-gem 'bundler', '~> 1.6.3'
-#gem 'bundler', '~> 1.7.9'
+gem 'sqlite3', '~>1.3.10'
+#gem 'bundler', '~> 1.6.3'
+gem 'bundler', '~> 1.7.9'

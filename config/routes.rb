@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   post  'login' => 'sessions#create'
   get  'logout' => 'sessions#destroy'
   resources :users
+  resources :user_steps
   
   #Jewel Add
   resources :homes, only: [:show]

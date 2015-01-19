@@ -1,0 +1,57 @@
+<% title 'New user - ForeverCard' %>
+<% style 'register' %>
+
+<div class="row header widthcap">
+  <div class="col-xs-12">
+    <div class="col-xs-12">
+      <h1>Create your ForeverCard</h1>
+      <p class="lead">Step 2/3: Social (optional)</p>
+      
+      <% if @user.errors.any? %>
+      <p class="error-notice">Please fix the following <%= pluralize(@user.errors.count, 'error') %>:</p>
+      <ul class="errors">
+        <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="widthcap clearfix">
+  <%= form_for :user, url: wizard_path(:display), :html => { :class => 'col-xs-12' }, method: :put do |f| %>
+  
+    <div class="row">
+        <div class="form-group col-md-6">
+            <%= f.label :facebook, 'Facebook username' %>
+            <%= f.text_field :facebook, :class => 'form-control' %>
+        </div>
+    
+        <div class="form-group col-md-6">
+            <%= f.label :twitter, 'Twitter handle' %>
+            <%= f.text_field :twitter, :class => 'form-control', :placeholder => '@yourhandle' %>    
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="form-group col-md-6">
+            <%= f.label :linkedin, 'LinkedIn URL (The URL to your personal profile)' %>
+            <%= f.text_field :linkedin, :class => 'form-control'%>
+        </div>
+    
+        <div class="form-group col-md-6">
+            <%= f.label :website, 'Personal website URL' %>
+            <%= f.text_field :website, :class => 'form-control', :placeholder => 'www.example.com' %>    
+        </div>
+    </div>            
+
+    <div class="col-sm-12">
+      <%= f.submit 'Create your ForeverCard', :class => 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
+
+<div class="row footer">
+  <div class="text-center copyright">&copy; 2014 Real Good Apps. All Rights Reserved.</div>
+</div>
