@@ -28,6 +28,7 @@
 <div class="widthcap clearfix">
   <%= form_for :order , url: wizard_path(:details, :order_id => @order.id), method: :put do |f| %>
   
+    <div class = text-center>
         <div class="row">
             <div class="form-group col-md-6 col-xs-10">
                 <%= f.label :quantity %>
@@ -45,6 +46,7 @@
         <p>
             
         </p>    
+        </div>
         </div>
         
         <p>
