@@ -1,9 +1,29 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  quantity: 1
+  quaintity: 1
   paperStock: MyString
+  design: MyString
+  subtotal: 1.5
+  total: 1.5
+  order_date: 2015-01-19 20:10:40
+  address1: MyString
+  address2: MyString
+  state: MyString
+  city: MyString
+  zip: MyString
+  user_id: 1
 
 two:
-  quantity: 1
+  quaintity: 1
   paperStock: MyString
+  design: MyString
+  subtotal: 1.5
+  total: 1.5
+  order_date: 2015-01-19 20:10:40
+  address1: MyString
+  address2: MyString
+  state: MyString
+  city: MyString
+  zip: MyString
+  user_id: 1
