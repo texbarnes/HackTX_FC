@@ -50,7 +50,7 @@
                 + Shipping
              </div>  
              <div style="float:right;">
-                <% getShipping(@order.quantity) %>
+                <% getShipping(orderAmounts[@order.paperStock + ' ' + @order.quantity.to_s]) %>
                 $<%= @shipping %>
              </div>
         </div>

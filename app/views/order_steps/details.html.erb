@@ -88,9 +88,13 @@
         </div>
       
      <div style="float:left;">
-        <a class="btn btn-primary" type="button" href=<%= wizard_path(:design, :order_id => @order.id) %>>Back: Design</a>
+         <div class="col-xs-5">
+            <a class="btn btn-primary" type="button" href=<%= wizard_path(:design, :order_id => @order.id) %>>Back: Design</a>
+        </div>
      </div>  
      <div style="float:right;">
-        <%= f.submit 'Next: Payment', :class => 'btn btn-primary' %> 
+         <div class="col-xs-5">
+            <%= f.submit 'Next: Payment', :class => 'btn btn-primary' %> 
+        </div>
      </div>
   <% end %>
