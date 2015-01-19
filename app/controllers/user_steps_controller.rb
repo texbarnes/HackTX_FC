@@ -10,7 +10,7 @@ class UserStepsController < ApplicationController
     def update
       @user = current_user
       @user.attributes = params[:user]
-      render_wizard @user
+      redirect_to wizard_path(next_step)
     end
     
     private
