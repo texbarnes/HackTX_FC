@@ -5,7 +5,7 @@ class OrderStepsController < ApplicationController
     
     def show
         @order_id = 150
-        @order = Order.find(params[:order_id])
+        @order = Order.find(params[@order_id])
         render_wizard
     end
     
