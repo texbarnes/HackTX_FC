@@ -28,14 +28,13 @@
 <div class="widthcap clearfix">
   <%= form_for :order , url: wizard_path(:details, :order_id => @order.id), method: :put do |f| %>
   
-    <div class = text-center>
         <div class="row">
-            <div class="form-group col-md-6 col-xs-10">
+            <div class="form-group col-md-6">
                 <%= f.label :quantity %>
                 <%= f.select(:quantity, { "100" => 100, "250" => 250, "500" => 500 }, {}, :class => 'form-control') %>
             </div>
             
-            <div class="form-group col-md-6 col-xs-10">
+            <div class="form-group col-md-6">
                 <%= f.label :paperStock %>
                 <%= f.select(:paperStock, { "Matte  $" => "Matte", 
                                         "Premium Matte  $$" => "Premium Matte",
@@ -46,7 +45,6 @@
         <p>
             
         </p>    
-        </div>
         </div>
         
         <p>
@@ -61,29 +59,29 @@
          <p>
             
         </p>
-            <div class="form-group col-md-7 col-xs-10">
+            <div class="form-group col-md-7">
                 <%= f.label :address1, 'Address Line 1' %>
                 <%= f.text_field :address1, :class => 'form-control' %>
             </div>
             
-            <div class="form-group col-md-3 col-xs-10">
+            <div class="form-group col-md-3">
                 <%= f.label :city, 'City' %>
                 <%= f.text_field :city, :class => 'form-control' %>
             </div>
             
-            <div class="form-group col-md-2 col-xs-10">
+            <div class="form-group col-md-2">
                 <%= f.label :state, 'State' %>
                 <%= select_tag :state, options_for_select(us_states), :class => 'form-control' %>
             </div>
         </div>
         
         <div class="row">
-            <div class="form-group col-md-7 col-xs-10">
+            <div class="form-group col-md-7">
                 <%= f.label :address2, 'Address Line 2 (if applicable)' %>
                 <%= f.text_field :address2, :class => 'form-control' %>
             </div>
             
-            <div class="form-group col-md-5 col-xs-10">
+            <div class="form-group col-md-5">
                 <%= f.label :zip, 'Zip Code' %>
                 <%= f.text_field :zip, :class => 'form-control' %>
             </div>
