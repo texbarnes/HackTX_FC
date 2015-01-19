@@ -33,42 +33,41 @@
   </div>
 </div>
 
-<div class="container">
-    <%= form_for :order , url: wizard_path(:design, :order_id => @order.id), method: :put , :html => { :multipart => true } do |f| %>
-        <div class="row">
-            <h2>Choose a Template</h2>
-            <% cardDesigns.each do|name,design| %>
-                <div class="col-md-3">
-                    <div class="text-center">
-                        <%= f.radio_button :design, :value => design %>
-                        <%= f.label :design, image_tag(design) %>
-                    </div>
-                </div>
-            <% end %>
-        </div>
-
-        <div class="row">
-            <h2>Or Upload a Design</h2>
-            <div class= "col-md-6">
-                <%= f.file_field :image %> 
-            </div>
-        </div>
-        <p>
-            
-        </p>
-</div>  
-
 <div class="widthcap clearfix">
-    <div style="float:left;">
-        <div class="col-xs-4">
-            <a class="btn btn-primary" type="button" href=<%= root_path %>>Back: Cancel Order</a>
-        </div> 
-     </div>  
-     
-     <div style="float:right;">
-         <div class="col-xs-4">
-            <%= f.submit 'Next: Order Details', :class => 'btn btn-primary' %>
-        </div>
-     </div>
-</div>
-    <% end %>
+    <div class="container">
+        <%= form_for :order , url: wizard_path(:design, :order_id => @order.id), method: :put , :html => { :multipart => true } do |f| %>
+            <div class="row">
+                <h2>Choose a Template</h2>
+                <% cardDesigns.each do|name,design| %>
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <%= f.radio_button :design, :value => design %>
+                            <%= f.label :design, image_tag(design) %>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+    
+            <div class="row">
+                <h2>Or Upload a Design</h2>
+                <div class= "col-md-6">
+                    <%= f.file_field :image %> 
+                </div>
+            </div>
+            <p>
+                
+            </p>
+    </div>  
+    
+        <div style="float:left;">
+            <div class="col-xs-4">
+                <a class="btn btn-primary" type="button" href=<%= root_path %>>Back: Cancel Order</a>
+            </div> 
+         </div>  
+         
+         <div style="float:right;">
+             <div class="col-xs-4">
+                <%= f.submit 'Next: Order Details', :class => 'btn btn-primary' %>
+            </div>
+         </div>
+        <% end %>
