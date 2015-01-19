@@ -16,7 +16,6 @@ class OrderStepsController < ApplicationController
     
     def create
         @order = Order.create
-        @order.user_id = current_user.id
         redirect_to wizard_path(:design, :order_id => @order.id)
     end
 end
