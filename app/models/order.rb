@@ -1,4 +1,6 @@
 class Order < ActiveRecord::Base
+    belongs_to :user
+    
     has_attached_file :image
     attr_accessible :paperStock, :quantity, :design, :image, :address1, :address2, :city, :state, :zip, :shipping
     

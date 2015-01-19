@@ -1,12 +1,12 @@
 module OrderStepsHelper
     
     def getShipping(quantity)
-        if(quantity == 100)
+        if(quantity <= 20)
+            @shipping = 4.99
+        elsif(quantity <= 40)
             @shipping = 6.99
-        elsif(quantity == 250)
-            @shipping = 9.99
         else
-            @shipping = 12.99
+            @shipping = 9.99
         end
     end
     

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150115004231) do
+ActiveRecord::Schema.define(version: 20150119152451) do
 
   create_table "admins", force: true do |t|
     t.string   "username"
@@ -20,24 +20,8 @@ ActiveRecord::Schema.define(version: 20150115004231) do
     t.datetime "updated_at"
   end
 
-  create_table "orders", force: true do |t|
-    t.integer  "quantity"
-    t.string   "paperStock"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "processed"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.string   "design"
-    t.string   "address1"
-    t.string   "address2"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip"
-    t.string   "shipping"
-  end
+# Could not dump table "orders" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "users", force: true do |t|
     t.string   "first"
@@ -70,6 +54,7 @@ ActiveRecord::Schema.define(version: 20150115004231) do
     t.string   "last_sign_in_ip"
     t.string   "provider"
     t.string   "uid"
+    t.string   "website"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
