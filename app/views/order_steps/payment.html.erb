@@ -2,15 +2,15 @@
 <% style 'card.css' %>
 
 <% orderAmounts = Hash.new %>
-<% orderAmounts["Matte 100"] = 28 %>
-<% orderAmounts["Matte 250"] = 38 %>
-<% orderAmounts["Matte 500"] = 32 %>
+<% orderAmounts["Matte 100"] = 15.99 %>
+<% orderAmounts["Matte 250"] = 16.99 %>
+<% orderAmounts["Matte 500"] = 17.99 %>
 <% orderAmounts["Premium Matte 100"] = 36 %>
 <% orderAmounts["Premium Matte 250"] = 38 %>
 <% orderAmounts["Premium Matte 500"] = 40 %>
-<% orderAmounts["Glossy 100"] = 28 %>
-<% orderAmounts["Glossy 250"] = 30 %>
-<% orderAmounts["Glossy 500"] = 32 %>
+<% orderAmounts["Glossy 100"] = 15.99 %>
+<% orderAmounts["Glossy 250"] =16.99 %>
+<% orderAmounts["Glossy 500"] = 17.99 %>
 <% orderAmounts["Recycled Matte 100"] = 36 %>
 <% orderAmounts["Recycled Matte 250"] = 38 %>
 <% orderAmounts["Recycled Matte 500"] = 40 %>
@@ -113,7 +113,7 @@
             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                   data-description="One time payment"
-                  data-amount="<%= @total * 100 %>"></script>
+                  data-amount="<%= 25 %>"></script>
          </div>
     </div>
 </div>
