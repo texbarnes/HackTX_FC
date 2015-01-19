@@ -56,16 +56,19 @@
         <p>
             
         </p>
-        <div style="float:left;">
-            <div class="col-xs-5">
-                <a class="btn btn-primary" type="button" href=<%= root_path %>>Back: Cancel Order</a>
-            </div> 
-         </div>  
-         
-         <div style="float:right;">
-             <div class="col-xs-5">
-                <%= f.submit 'Next: Order Details', :class => 'btn btn-primary' %>
-            </div>
-         </div>
-    <% end %>
+</div>  
+
+<div class="widthcap clearfix">
+    <div style="float:left;">
+        <div class="col-xs-5">
+            <a class="btn btn-primary" type="button" href=<%= root_path %>>Back: Cancel Order</a>
+        </div> 
+     </div>  
+     
+     <div style="float:right;">
+         <div class="col-xs-5">
+            <%= f.submit 'Next: Order Details', :class => 'btn btn-primary' %>
+        </div>
+     </div>
 </div>
+    <% end %>
