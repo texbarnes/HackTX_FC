@@ -35,8 +35,11 @@
     </div>
     
     <%=if(!(@user.twitter == ""))
-       generateTwitForm
-       raw @twitForm
+       generateDivs
+        @startDivs
+        f.label 'Twitter' 
+        f.check_box :showTwit
+        @endDivs
      end %>
     
     <div class="row">

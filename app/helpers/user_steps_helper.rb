@@ -1,6 +1,7 @@
 module UserStepsHelper
     
-    def generateTwitForm
-        @twitForm = "<div class='row'> <div class='form-group col-md-6'> <%= f.label 'Twitter' %> <%= f.check_box :showTwit %> </div> </div>".html_safe
+    def generateDivs
+        @startDivs = "<div class='row'> <div class='form-group col-md-6'>"
+        @endDivs = "</div> </div>"
     end    
 end
