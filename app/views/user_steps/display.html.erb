@@ -34,9 +34,9 @@
         </div>
     </div>
     
-    <%= if(!(@user.twitter == ""))%>
-        <% f.check_box :showTwit %>
-        <% f.label 'Twitter' %>
+    <%= if(!(@user.twitter == ""))
+         f.check_box :showTwit 
+         f.label 'Twitter'
      <% end %>
     
     <div class="row">
