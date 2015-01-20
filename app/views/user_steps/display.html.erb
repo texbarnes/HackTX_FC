@@ -36,7 +36,7 @@
     
     <%=if(!(@user.twitter == ""))
        generateTwitForm
-       @twitForm.html_safe
+       raw @twitForm
      end %>
     
     <div class="row">
