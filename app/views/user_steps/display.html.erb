@@ -34,13 +34,10 @@
         </div>
     </div>
     
-    <%=if(!(@user.twitter == ""))
-       generateDivs
-        @startDivs
-        f.label 'Twitter' 
-        f.check_box :showTwit
-        @endDivs
-     end %>
+    <%if(!(@user.twitter == ""))%>
+        <%= f.label 'Twitter' %>
+        <%= f.check_box :showTwit %>
+     <% end %>
     
     <div class="row">
         <div class="form-group col-md-6">
