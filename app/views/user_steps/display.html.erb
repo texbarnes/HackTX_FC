@@ -1,0 +1,66 @@
+<% title 'New user - ForeverCard' %>
+<% style 'register' %>
+
+<div class="row header widthcap">
+  <div class="col-xs-12">
+    <div class="col-xs-12">
+      <h1>Create your ForeverCard</h1>
+      <p class="lead">Step 3/3: Display</p>
+    </div>
+  </div>
+</div>
+
+<div class="widthcap clearfix">
+  <%= form_for :user, url: wizard_path, :html => { :class => 'col-xs-12' }, method: :put do |f| %>
+  
+    <div class="row">
+        <div class="form-group col-md-6">
+            <%= f.label "Email" %> <br />
+            <%= f.check_box :showE %> <br />
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="form-group col-md-6">
+            <%= f.label "Phone" %> <br />
+            <%= f.check_box :showP %> <br />
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="form-group col-md-6">
+            <%= f.label "Texting" %> <br />
+            <%= f.check_box :showText %> <br />
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="form-group col-md-6">
+            <%= f.label "Twitter" %> <br />
+            <%= f.check_box :showTwit %> <br />
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="form-group col-md-6">
+            <%= f.label "Facebook" %> <br />
+            <%= f.check_box :showFace %> <br />
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="form-group col-md-6">
+            <%= f.label "LinkedIn" %> <br />
+            <%= f.check_box :showLink %> <br />
+        </div>
+    </div>
+
+    <div class="col-sm-12">
+      <%= f.submit 'Create your ForeverCard', :class => 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
+
+<div class="row footer">
+  <div class="text-center copyright">&copy; 2014 Real Good Apps. All Rights Reserved.</div>
+</div>
