@@ -14,11 +14,13 @@
   <%= form_for :user, url: wizard_path, :html => { :class => 'col-xs-12' }, method: :put do |f| %>
   
   <%= getParams(@user) %>
+    <% @pars.each do|label,attribute| %>
   
         <div class="row">
-            <%= f.label 'Twitter' %> <br />
-            <%= f.check_box :showTwit %> <br />
+            <%= f.label label %> <br />
+            <%= f.check_box attribute %> <br />
         </div>
+    <% end %>
 
     <div class="col-sm-12">
       <%= f.submit 'Create your ForeverCard', :class => 'btn btn-primary' %>
