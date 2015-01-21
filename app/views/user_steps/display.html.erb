@@ -13,52 +13,14 @@
 <div class="widthcap clearfix">
   <%= form_for :user, url: wizard_path, :html => { :class => 'col-xs-12' }, method: :put do |f| %>
   
-    <div class="row">
-        <div class="form-group col-md-6">
-            <%= f.label "Email" %> <br />
-            <%= f.check_box :showE %> <br />
+  <%= getParams(@user) %>
+    <% @pars.each do|label,attribute| %>
+  
+        <div class="row">
+            <%= f.label label %> <br />
+            <%= f.check_box attribute %> <br />
         </div>
-    </div>
-    
-    <div class="row">
-        <div class="form-group col-md-6">
-            <%= f.label "Phone" %> <br />
-            <%= f.check_box :showP %> <br />
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="form-group col-md-6">
-            <%= f.label "Texting" %> <br />
-            <%= f.check_box :showText %> <br />
-        </div>
-    </div>
-    
-    <%= if(!(@user.twitter == ""))
-         f.check_box :showTwit 
-         f.label 'Twitter'
-      end %>
-    
-    <div class="row">
-        <div class="form-group col-md-6">
-            <%= f.label "Facebook" %> <br />
-            <%= f.check_box :showFace %> <br />
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="form-group col-md-6">
-            <%= f.label "LinkedIn" %> <br />
-            <%= f.check_box :showLink %> <br />
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="form-group col-md-6">
-            <%= f.label "Check to turn 'Classic Mode' On" %> <br />
-            <%= f.check_box :showLink %> <br />
-        </div>
-    </div>
+    <% end %>
 
     <div class="col-sm-12">
       <%= f.submit 'Create your ForeverCard', :class => 'btn btn-primary' %>
