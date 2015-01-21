@@ -35,7 +35,10 @@
       </div>
       
       <div class="row text-center">
-        <%= phone_number_link(@user.phone) %> 
+        <%= if(@user.showP)
+              phone_number_link(@user.phone) 
+            end %>
+        <%= link_to image_tag("http://i61.tinypic.com/qswi2d.png"), "mailto:" + @user.email
       </div>  
       
   </div>
