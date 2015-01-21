@@ -17,8 +17,10 @@
     <% @pars.each do|label,attribute| %>
   
         <div class="row">
-            <%= f.check_box attribute %>
-            <%= f.label label %>
+            <div class="text-center">
+                <%= f.check_box attribute %>
+                <%= f.label label %>
+            </div>
         </div>
     <% end %>
 
