@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_many :orders
   
-  attr_accessible :username , :first , :last , :email , :password , :phone , :role , :bio , :facebook , :twitter , :linkedin , :org
+  attr_accessible :username , :first , :last , :email , :password , :phone , :role , :bio , :facebook , :twitter , :linkedin , :org, :website
 
   validates :username, presence: true,
                     length: { minimum: 2 },
