@@ -13,8 +13,7 @@ class UserStepsController < ApplicationController
       redirect_to wizard_path(next_step)
     end
     
-    private
-    def redirect_to_finish_wizard
-      redirect_to user_path
+    def finish_wizard_path
+      user_path(current_user)
     end
 end
