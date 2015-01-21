@@ -18,27 +18,31 @@
         </div>
       </div>
     </div>
-    
-      <div class="row text-center">
-          <a href="tel://<%= @user.phone %>"><%= image_tag("http://i57.tinypic.com/kf00tk.png") %></a>
-          <%=if(!(@user.facebook == ""))
-           link_to image_tag("http://i61.tinypic.com/33lcad2.png"), "http://www.facebook.com/" + @user.facebook
-           end %> 
-          <a href="mailto:<%= @user.email %>"><%= image_tag("http://i61.tinypic.com/qswi2d.png") %></a>
-          <%=if(!(@user.twitter == ""))
-               link_to image_tag("http://i58.tinypic.com/2uygnk7.png"), "http://www.twitter.com/" + @user.twitter
-            end %>  
-          <a href="sms:<%= @user.phone %>"><%= image_tag("http://i58.tinypic.com/2njbuw7.png") %></a>
-          <%=if(!(@user.linkedin == ""))
-           link_to image_tag("http://i60.tinypic.com/o88lzt.png"), "http://www.linkedin.com/profile/view?id=" + @user.linkedin
-          end %> 
-      </div>
       
       <div class="row text-center">
         <%= if(@user.showP)
               phone_number_link(@user.phone) 
             end %>
-        <%= link_to image_tag("http://i61.tinypic.com/qswi2d.png"), "mailto:" + @user.email %>
+            
+        <%= if(@user.showE)
+              link_to image_tag("http://i61.tinypic.com/qswi2d.png"), "mailto:" + @user.email
+            end %>
+            
+        <%= if(@user.showText)
+              text_link(@user.phone) 
+            end %>
+            
+        <%= if(@user.showTwit)
+             link_to image_tag("http://i58.tinypic.com/2uygnk7.png"), "http://www.twitter.com/" + @user.twitter 
+            end %>
+            
+        <%= if(@user.showFace)
+              link_to image_tag("http://i61.tinypic.com/33lcad2.png"), "http://www.facebook.com/" + @user.facebook
+            end %>
+            
+        <%= if(@user.showLink)
+              link_to image_tag("http://i60.tinypic.com/o88lzt.png"), "" + @user.linkedin
+            end %>
       </div>  
       
   </div>
