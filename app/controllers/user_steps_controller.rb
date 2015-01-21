@@ -15,6 +15,6 @@ class UserStepsController < ApplicationController
     
     private
     def redirect_to_finish_wizard
-      redirect_to root_url, notice: "Thanks for signing up."
+      redirect_to user_path
     end
 end
