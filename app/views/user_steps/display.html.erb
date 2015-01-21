@@ -11,7 +11,7 @@
 </div>
 
 <div class="widthcap clearfix">
-  <%= form_for :user, url: wizard_path, :html => { :class => 'col-xs-12' }, method: :put do |f| %>
+  <%= form_for :user, url: root_url, :html => { :class => 'col-xs-12' }, method: :put do |f| %>
   
   <%= getParams(@user) %>
     <% @pars.each do|label,attribute| %>
