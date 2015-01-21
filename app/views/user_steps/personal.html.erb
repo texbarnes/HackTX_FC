@@ -62,9 +62,17 @@
       </div>
     </div>
 
-    <div class="col-sm-12">
-      <%= f.submit 'Create your ForeverCard', :class => 'btn btn-primary' %>
-    </div>
+    <div style="float:left;">
+        <div class="col-xs-4">
+            <a class="btn btn-primary" type="button" href=<%= root_path %>>Back: Home</a>
+        </div> 
+     </div>  
+     
+     <div style="float:right;">
+         <div class="col-xs-4">
+            <%= f.submit 'Next: Social', :class => 'btn btn-primary' %>
+        </div>
+     </div>
   <% end %>
 </div>
 

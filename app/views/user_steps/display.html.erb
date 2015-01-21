@@ -18,15 +18,25 @@
   
         <div class="row">
             <div class="text-center">
-                <%= f.check_box attribute %>
-                <%= f.label label %>
+                <div class="col-md-12">
+                    <%= f.check_box attribute %>
+                    <%= f.label label %>
+                </div>
             </div>
         </div>
     <% end %>
 
-    <div class="col-sm-12">
-      <%= f.submit 'Create your ForeverCard', :class => 'btn btn-primary' %>
-    </div>
+    <div style="float:left;">
+        <div class="col-xs-4">
+            <a class="btn btn-primary" type="button" href=<%= wizard_path(:social) %>>Back: Social</a>
+        </div> 
+     </div>  
+     
+     <div style="float:right;">
+         <div class="col-xs-4">
+            <%= f.submit 'Next: Home', :class => 'btn btn-primary' %>
+        </div>
+     </div>
   <% end %>
 </div>
 
