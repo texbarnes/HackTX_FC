@@ -9,9 +9,8 @@ class UserStepsController < ApplicationController
     
     def update
       @user = current_user
-      info = user_steps_params
-      if @user.update_attributes(info)
-        redirect_to wizard_path(next_step)
+      if @user.update_attributes(params[:user])
+        render_wizard @user
       else
         redirect_to wizard_path
       end
