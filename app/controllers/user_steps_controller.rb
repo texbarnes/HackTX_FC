@@ -23,6 +23,6 @@ class UserStepsController < ApplicationController
     
     private
     def user_steps_params
-      params.require(:user).permit(:username , :first , :last , :org , :role , :bio)
+      params.require(:user).permit(:username , :first , :last , :org , :role , :bio , :phone , :email , :facebook , :twitter , :linkedIn, :website , :showP, :showE, :showText, :showWeb, :showTwit, :showFace, :showLink)
     end
 end
