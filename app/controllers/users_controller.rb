@@ -64,7 +64,7 @@ class UsersController < ApplicationController
   
   private
   def user_params
-    params.require(:user).permit(:first, :last, :email, :username, :password, :org, :role, :phone, :bio, :facebook, :twitter, :linkedin)
+    params.require(:user).permit(:last, :email, :username, :password, :org, :role, :phone, :bio, :facebook, :twitter, :linkedin)
   end
   
   def choose_layout
