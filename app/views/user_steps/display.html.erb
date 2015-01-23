@@ -23,6 +23,20 @@
             </div>
         </div>
     <% end %>
+          
+      <div class="row">
+        <div align="center">
+          <%= f.radio_button :classicMode, :value => true %>
+          <%= f.label 'Classic Mode:' + image_tag("http://i62.tinypic.com/11w9dzr.png") %>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div align="center">
+          <%= f.radio_button :classicMode, :value => false %>
+          <%= f.label 'Modern Mode:' + image_tag("http://i57.tinypic.com/2lwxik6.png") %>
+        </div>
+      </div>
 
     <div style="float:left;">
         <div class="col-xs-4">
