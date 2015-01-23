@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   
   resources :charges
   
+  get 'users/classic'
+  
   get 'vcard/show'
   
   get 'admin/new'
