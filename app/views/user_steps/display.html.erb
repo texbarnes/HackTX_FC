@@ -4,14 +4,19 @@
 <div class="row header widthcap">
   <div class="col-xs-12">
     <div class="col-xs-12">
-      <h1>Edit your ForeverCard</h1>
-      <p class="lead">Step 3/3: What information do you want people to see?</p>
+      <h1>Step 3/3: Display</h1>
     </div>
   </div>
 </div>
 
 <div class="widthcap clearfix">
   <%= form_for :user, url: wizard_path, :html => { :class => 'col-xs-12' }, method: :put do |f| %>
+  
+    <div class="form-group row">
+        <div align="center">
+          <h2>What information should people see?</h2>
+        </div>
+    </div>
   
   <%= getParams(@user) %>
     <% @pars.each do|label,attribute| %>
@@ -25,12 +30,18 @@
     <% end %>
   </div>
   
+   <div class="form-group row">
+        <div align="center">
+          <h2>What should your page look like?</h2>
+        </div>
+    </div>
+  
   <div class = "container">
     <div class="row header widthcap">      
       <div class="row">
         <div class="col-md-6"> 
           <div align="center">
-            <h2>Classic Mode</h2>
+            <h3>Classic Mode</h3>
              <%= f.label :classicMode, image_tag("http://i58.tinypic.com/1z4ldvn.png") %><br>
             <%= f.radio_button :classicMode, true %>
           </div>
@@ -38,7 +49,7 @@
         
         <div class="col-md-6"> 
           <div align="center">
-            <h2>Modern Mode</h2>
+            <h3>Modern Mode</h3>
             <%= f.label :classicMode, image_tag("http://i61.tinypic.com/15cknxx.png") %><br>
             <%= f.radio_button :classicMode, false %>
           </div>
