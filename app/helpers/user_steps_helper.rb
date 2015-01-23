@@ -16,14 +16,11 @@ module UserStepsHelper
         
         if(!(user.phone == ""))
             @pars['Phone'] = :showP
+            @pars['Instant Text'] = :showText
         end
         
         if(!(user.email == ""))
             @pars['Email'] = :showE
         end
-        
-        if(!(user.twitter == ""))
-            @pars['Website'] = :showWeb
-        end   
     end    
 end
