@@ -21,14 +21,22 @@
 
     <div align="center">
         <div class="row">
+          <div class="col-xs-12">
+            <div class="row aligned">
               <div class="fa fa-phone"></div>
               <div><a href="tel://<%= @user.phone %>"><%= @user.phone %></a></div>
+            </div>
+          </div>
           
+          <div class="col-xs-12">
             <div class="row aligned">
             </div>
     
+            <div class="row aligned">
               <div class="fa fa-envelope"></div>
               <div><a href="mailto:<%= @user.email %>"><%= @user.email %></a></div>
+            </div>
+          </div>
         </div>
     </div>
 
