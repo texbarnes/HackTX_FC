@@ -13,9 +13,7 @@ class User < ActiveRecord::Base
                #     inclusion: { in: %w(),
                #     message: "Email %{value}" }
   has_secure_password
-  validates :password, presence: true,
-                    length: { minimum: 6 },
-                    confirmation: true
+  
   validates :phone, presence: true,
                     length: { within: 10..14 }
                    # numericality: { only_integer: true }
