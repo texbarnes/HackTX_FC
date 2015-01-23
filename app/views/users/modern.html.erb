@@ -25,7 +25,7 @@
             end %>
             
         <%= if(@user.showE)
-              link_to image_tag("http://i61.tinypic.com/qswi2d.png"), "mailto:" + @user.email + "&body=--+Email+provided+by+ForeverCard"
+              link_to image_tag("http://i61.tinypic.com/qswi2d.png"), "mailto:" + @user.email + + "?subject=&body=--+Email+provided+by+ForeverCard"
             end %>
             
         <%= if(@user.showText)
