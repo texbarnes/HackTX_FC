@@ -16,7 +16,7 @@
   <%= getParams(@user) %>
     <% @pars.each do|label,attribute| %>
   
-        <div class="row">
+        <div class="form-group row">
             <div align="center">
                     <%= f.check_box attribute %>
                     <%= f.label label %>
@@ -30,16 +30,16 @@
       <div class="row">
         <div class="col-md-6"> 
           <div align="center">
-            <h4>Classic Mode</h4>
-             <%= f.label :classicMode, image_tag("http://i61.tinypic.com/15cknxx.png") %>
+            <h2>Classic Mode</h2>
+             <%= f.label :classicMode, image_tag("http://i61.tinypic.com/15cknxx.png") %><br>
             <%= f.radio_button :classicMode, true %>
           </div>
         </div>
         
         <div class="col-md-6"> 
           <div align="center">
-            <h4>Modern Mode</h4>
-            <%= f.label :classicMode, image_tag("http://i58.tinypic.com/1z4ldvn.png") %>
+            <h2>Modern Mode</h2>
+            <%= f.label :classicMode, image_tag("http://i58.tinypic.com/1z4ldvn.png") %><br>
             <%= f.radio_button :classicMode, false %>
           </div>
         </div>
