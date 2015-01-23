@@ -22,7 +22,6 @@
 <div class="widthcap clearfix">
   <%= form_for :user, url: users_path, :html => { :class => 'col-xs-12' } do |f| %>
     <div class="col-sm-6">
-      <h2>Account</h2>
       
       <div class="row">
         <div class="form-group col-md-6">
@@ -46,14 +45,8 @@
         <%= f.password_field :password, :class => 'form-control' %>
       </div>
 
-      <div class="form-group">
-        <%= f.label :confirm_password %>
-        <%= f.password_field :confirm_password, :class => 'form-control' %>
-      </div>
-    </div>
 
     <div class="col-sm-6">
-      <h2>Profile</h2>
 
       <div class="form-group">
         <%= f.label :org, 'Company/ Organization' %>
@@ -64,43 +57,10 @@
         <%= f.label :role %>
         <%= f.text_field :role, :class => 'form-control' %>
       </div>
-
-      <div class="form-group">
-        <%= f.label :phone, 'Phone number' %>
-        <%= f.text_field :phone, :class => 'form-control'%>
-      </div>
       
       <div class="form-group">
-        <%= f.label :email %>
-        <%= f.text_field :email, :class => 'form-control', :placeholder => 'email@example.com' %>
-      </div>
-    </div>
-
-    <div class="col-sm-4">
-      <div class="form-group">
-        <%= f.label :facebook, 'Facebook username' %>
-        <%= f.text_field :facebook, :class => 'form-control' %>
-      </div>
-    </div>
-
-    <div class="col-sm-4">
-      <div class="form-group">
-        <%= f.label :twitter, 'Twitter handle' %>
-        <%= f.text_field :twitter, :class => 'form-control', :placeholder => '@yourhandle' %>
-      </div>
-    </div>
-
-    <div class="col-sm-4">
-      <div class="form-group">
-        <%= f.label :linkedin, 'LinkedIn profile Username or ID' %>
-        <%= f.text_field :linkedin, :class => 'form-control'%>
-      </div>
-    </div>
-
-    <div class="col-sm-12">
-      <div class="form-group">
-        <%= f.label :bio, 'Short biography' %>
-        <%= f.text_area :bio, :class => 'form-control', :rows => '5' %>
+        <%= f.label :confirm_password %>
+        <%= f.password_field :confirm_password, :class => 'form-control' %>
       </div>
     </div>
 
