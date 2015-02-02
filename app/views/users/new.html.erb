@@ -29,6 +29,11 @@
         <%= f.text_field :username, :class => 'form-control' %>
       </div>
       
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.text_field :email, :class => 'form-control' %>
+      </div>
+      
       <div class="row">
         <div class="form-group col-md-6">
           <%= f.label :password, 'Password' %>
@@ -39,11 +44,6 @@
           <%= f.label :confirm_password, 'Confirm Password' %>
           <%= f.text_field :confirm_password, :class => 'form-control' %>
         </div>
-      </div>
-      
-      <div class="form-group">
-        <%= f.label :email %>
-        <%= f.text_field :email, :class => 'form-control' %>
       </div>
     </div>
 

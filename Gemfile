@@ -80,6 +80,6 @@ gem 'wicked'
 gem 'vpim'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
-#gem 'sqlite3', '~>1.3.10'
+gem 'sqlite3', '~>1.3.10'
 #gem 'bundler', '~> 1.6.3'
 gem 'bundler', '~> 1.7.12'
