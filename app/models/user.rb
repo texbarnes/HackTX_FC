@@ -2,7 +2,9 @@ class User < ActiveRecord::Base
   has_many :orders
   
   attr_accessible :username , :first , :last , :email , :password , :phone , :role , :bio , :facebook , :twitter , :linkedin , :org, :website, :showP, :showE, :showText, :showTwit, :showFace, :showLink, :showWeb, :classicMode
-  attr_accessor :updating_password
+  def active?
+    status == 'active'
+  end
 
   validates_presence_of :username, if: :on_personal_step?,
                     length: { minimum: 2 },
