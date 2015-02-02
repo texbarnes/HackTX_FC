@@ -2,26 +2,21 @@ class User < ActiveRecord::Base
   has_many :orders
   
   attr_accessible :username , :first , :last , :email , :password , :phone , :role , :bio , :facebook , :twitter , :linkedin , :org, :website, :showP, :showE, :showText, :showTwit, :showFace, :showLink, :showWeb, :classicMode
-  def active?
-    status == 'active'
-  end
+  
 
-  validates_presence_of :username, if: :on_personal_step?,
+  validates :username, presence: true,
                     length: { minimum: 2 },
                     uniqueness: { case_sensitive: false }
-  validates_presence_of :first, if: :on_personal_step?
-  validates_presence_of :last, if: :on_personal_step?
-  validates_presence_of :role, if: :on_personal_step?
+  validates :first, presence: true
+  validates :last, presence: true
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates_presence_of :email, if: :on_personal_step?, format: {with: VALID_EMAIL_REGEX}
+  validates :email, presence: true, format: {with: VALID_EMAIL_REGEX}
                #     inclusion: { in: %w(),
                #     message: "Email %{value}" }
   has_secure_password
   
-  validates_format_of :phone, :with => /length: { within: 10..14 }/, :allow_blank => true
+  validates :phone, length: { within: 10..14 }
                    # numericality: { only_integer: true }
-
-  validates :password, presence: true, confirmation: true
 
   # Returns the hash digest of the given string.
   def User.digest(string)
