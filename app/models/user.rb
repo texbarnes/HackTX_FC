@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   validates_format_of :phone, :with => /length: { within: 10..14 }/, :allow_blank => true
                    # numericality: { only_integer: true }
 
-  validates_confirmation_of :password, :if => should_validate_password?
+  validates :password, presence: true, confirmation: true
 
   # Returns the hash digest of the given string.
   def User.digest(string)
