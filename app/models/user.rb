@@ -2,21 +2,29 @@ class User < ActiveRecord::Base
   has_many :orders
   
   attr_accessible :username , :first , :last , :email , :password , :phone , :role , :bio , :facebook , :twitter , :linkedin , :org, :website, :showP, :showE, :showText, :showTwit, :showFace, :showLink, :showWeb, :classicMode
+  attr_accessor :updating_password
 
-  validates :username, presence: true,
+  validates_presence_of :username, if: :on_personal_step?,
                     length: { minimum: 2 },
                     uniqueness: { case_sensitive: false }
-  validates :first, presence: true
-  validates :last, presence: true
+  validates_presence_of :first, if: :on_personal_step?
+  validates_presence_of :last, if: :on_personal_step?
+  validates_presence_of :role, if: :on_personal_step?
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates :email, presence: true, format: {with: VALID_EMAIL_REGEX}
+  validates_presence_of :email, if: :on_personal_step?, format: {with: VALID_EMAIL_REGEX}
                #     inclusion: { in: %w(),
                #     message: "Email %{value}" }
   has_secure_password
   
-  validates :phone, presence: true,
+  validates_format_of :phone, :allow_blank => true,
                     length: { within: 10..14 }
                    # numericality: { only_integer: true }
+
+  validates_confirmation_of :password, :if => should_validate_password?
+
+  def should_validate_password?
+    updating_password || new_record?
+  end
 
   # Returns the hash digest of the given string.
   def User.digest(string)

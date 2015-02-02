@@ -18,4 +18,9 @@ class OrderStepsController < ApplicationController
         @order = Order.create(:order_date => Time.now, :user_id => current_user.id)
         redirect_to wizard_path(:design, :order_id => @order.id)
     end
+    
+    private
+    def user_steps_params
+      params.require(:order).permit(:quantity, :paperStock, :design, :subtotal, :total, :order_date, :address1, :address2, :state, :city, :zip, :user_id)
+    end
 end

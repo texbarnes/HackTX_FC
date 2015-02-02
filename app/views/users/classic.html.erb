@@ -34,7 +34,7 @@
     
             <div class="row aligned">
               <div class="fa fa-envelope"></div>
-              <div><a href="mailto:<%= @user.email %>"><%= @user.email %></a></div>
+              <div><a href="mailto:<%= @user.email + "?subject=&body=" + "%0D%0A" + "%0D%0A" + "%0D%0A" + "-Email provided by ForeverCard.co"%>"><%= @user.email %></a></div>
             </div>
           </div>
         </div>
