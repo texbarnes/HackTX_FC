@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
                #     message: "Email %{value}" }
   has_secure_password
   
-  validates :phone, length: { within: 10..14 }
+  validates :phone, length: { within: 10..14 }, :allow_blank => true
                    # numericality: { only_integer: true }
 
   # Returns the hash digest of the given string.
