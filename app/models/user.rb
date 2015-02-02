@@ -16,8 +16,7 @@ class User < ActiveRecord::Base
                #     message: "Email %{value}" }
   has_secure_password
   
-  validates_format_of :phone, :allow_blank => true,
-                    length: { within: 10..14 }
+  validates_format_of :phone, :with => /length: { within: 10..14 }/, :allow_blank => true
                    # numericality: { only_integer: true }
 
   validates_confirmation_of :password, :if => should_validate_password?
