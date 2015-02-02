@@ -9,7 +9,6 @@ class UserStepsController < ApplicationController
     
     def update
       @user = current_user
-      @user.updating_password = true
       @user.update_attributes(params[:user])
       render_wizard @user
     end
