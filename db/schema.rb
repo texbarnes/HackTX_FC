@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150202150632) do
+ActiveRecord::Schema.define(version: 20150202152728) do
 
   create_table "admins", force: true do |t|
     t.string   "username"
@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 20150202150632) do
     t.boolean  "showLink"
     t.boolean  "showFace"
     t.boolean  "showWeb"
-    t.boolean  "classicMode",            default: true
+    t.boolean  "classicMode",            default: false
     t.string   "status"
   end
 
