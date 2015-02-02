@@ -21,10 +21,6 @@ class User < ActiveRecord::Base
 
   validates_confirmation_of :password, :if => should_validate_password?
 
-  def should_validate_password?
-    updating_password || new_record?
-  end
-
   # Returns the hash digest of the given string.
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
